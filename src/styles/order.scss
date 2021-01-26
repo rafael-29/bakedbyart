@@ -1,0 +1,134 @@
+// the ORDER SUMMARY
+
+.the-sum{
+    width: 31%;
+    font-family: $ptserif;
+    }
+    .order-sum{
+    padding: 15px;
+    border: 1px solid rgba($color:brown, $alpha: 0.8);
+    border-radius: 4px;
+    color: brown;
+    margin-bottom: 12px;
+    .order-sumhead{
+    margin-bottom: 10px;
+    font-family: $noto;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    }
+    .subtotal{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    font-family: $noto;
+    font-size: 1rem;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba($color: brown, $alpha: 0.8);
+    margin-bottom: 8px;
+    }
+    }
+    .deliver{
+    @include space();
+    font-size: 1.1rem;
+    }
+    .charges{
+    border-bottom: 1px solid rgba($color: brown, $alpha: 0.8);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    }
+    .estimation{
+    @include space();
+    font-size: 1.2rem;
+    }
+    
+    .prom-code{
+    padding: 10px;
+    border-bottom: 1px solid rgba($color: brown, $alpha: 0.8);
+    
+    color: $medium;
+    margin-bottom: 25px;
+    }
+    .have-promo{
+    font-family: $ptserif;
+    font-size: 1.1rem;
+    color: brown;
+    }
+    .promoTxt{
+    border-radius: 5px;
+    border: 1px solid brown;
+    background: none;
+    font-size: 1.3rem;
+    outline: none;
+    font-family: monospace;
+    }
+    .promoform{
+    display: flex;
+    border: 2px solid black;
+    }
+    .promo-btn{
+    border: none;
+    outline: none;
+    padding: 5px;
+    background: none;
+    transform: translateY(2px);
+    cursor: pointer;
+    }
+    .promo-btn:active .fa-plus-square{
+    color: $verylight;
+    }
+    .fa-plus-square{
+    font-size: 1.5rem;
+    color: brown;
+    }
+    
+    .checkoutbx{
+    text-align: center;
+    }
+    .checkout{
+    width: 90%;
+    padding: 7px 0;
+    background: $dark;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    border: 5px;
+    cursor: pointer;
+    outline: none;
+    color: $verylight;
+    }
+    .ch-checklink{
+    text-decoration: none;
+    color: $verylight;
+    font-family: 'Roboto Mono', monospace;
+    }
+    .checkout:active .ch-checklink{
+    color: brown;
+    }
+    .checkout:active{
+    background: $verylight;
+    }
+    .ch-ben{
+    color: $dark;
+    font-weight: 700;
+    font-size: 1.1rem;
+    }
+    .ch-ul{
+    list-style: none;
+    font-family: $noto;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    .ch-li{
+    color: $dark;
+    position: relative;
+    }
+    .ch-li::before{
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: $dark;
+    left: -15px;
+    top: 9px;
+    }
+    }
+    

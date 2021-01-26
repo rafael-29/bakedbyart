@@ -1,0 +1,179 @@
+// cart page
+.cart-page{
+    padding: 160px 80px 80px 80px;
+    margin-bottom: 400px;
+    }
+    .cart-headerz{
+    @include around();
+    width: 96%;
+    border-bottom: 2px solid brown;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    
+    }
+    .fa-home{
+    font-size: 3rem;
+    color: brown;
+    }
+    .cart-headingone{
+    color: brown;
+    text-align: center;
+    }
+    
+    .the-container{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-bottom: 20px;
+    }
+    .the-cart{
+    width: 67%;
+    
+    }
+    .cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 1px solid brown;
+    font-family: $noto;
+    margin-bottom: 11px;
+    .crt-headone{
+    
+    font-size: 2rem;
+    color: brown;
+    }
+    .crt-ul{
+    list-style: none;
+    display: flex;
+    }
+    .crt-ul .crt-li{
+    margin-left: 20px;
+    color: brown;
+    font-size: 1.3rem;
+    }
+    }
+    
+    
+    
+///// carts datas
+.crt-cont{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+    }
+    
+    .crts{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    padding-right: 20px;
+    margin-bottom: 10px;
+    }
+    .img-and-name{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    }
+    .crt-imgbx{
+    height: 180px;
+    width: 170px;
+    margin-right: 5px;
+    .crt-img{
+    height: 100%;
+    width: 100%;
+    }
+    }
+    .bigbndl-imgbx{
+    height: 190px;
+    width: 250px;
+    margin-right: 10px;
+    .bigbndl-img{
+    height: 100%;
+    width: 100%;
+    }
+    }
+    .qnty-and-total{
+    display: flex;
+    align-items: flex-start;
+    
+    font-family: $noto;
+    color: brown;
+    }
+    .cost{
+    margin-left: 93px;
+    font-size: 1.6rem;
+    }
+    .qnty{
+    font-size: 1.2rem;
+    color: brown;
+    margin-bottom: 35px;
+    font-family: $ptserif;
+    }
+    
+    .crt-name{
+    font-size: 2.1rem;
+    font-family: $menucap;
+    color: brown;
+    }
+    .crt-subname{
+    font-family: $ptserif;
+    color: brown;
+    margin-bottom: 6px;
+    position: relative;
+    }
+    .crt-subname::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 120%;
+    background: brown;
+    height: 1px;
+    }
+    
+    .crt-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: $dark;
+    }
+    .rem{
+    margin-right: 15px;
+    }
+    .crt-btn:active{
+    color: $light;
+    
+    }
+    .fa-arrow-left{
+    font-size: 1.5rem;
+    color: brown;
+    transform: translate(12px, 3px);
+    animation: 2s arrowing ease-in-out infinite;
+    }
+    
+    @keyframes arrowing {
+    0%{
+    transform: translate(12px, 3px);
+    }
+    50%{
+    transform: translate(0, 3px);
+    }
+    100%{
+        transform: translate(12px, 3px);
+    }
+    }
+    // EMPTY CART
+    .empty{
+    margin-top: 20px;
+    }
+    .link-empt{
+    color: brown;
+    text-decoration: none;
+    font-size: 1.6rem;
+    }
+    

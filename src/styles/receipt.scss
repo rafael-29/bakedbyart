@@ -1,0 +1,155 @@
+// RECEIPT STYLING
+.receipt-page{
+    padding: 50px 80px 200px 80px;
+    
+    margin-bottom: 200px;
+    }
+    .rcpt-header{
+    margin-bottom: 20px;
+    font-family: $monste;
+    opacity: .8;
+    font-size: 2.4rem;
+    }
+    .rcpt-billinfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    }
+    .date{
+    width: 120px;
+    overflow: hidden;
+    height: 24px;
+    font-family: $noto;
+    color: brown;
+    font-weight: 600;
+    }
+    .orderno{
+    font-size: 1.2rem;
+    font-family: $noto;
+    font-weight: 600;
+    color: brown;
+    }
+    .rcp-ul{
+    list-style: none;
+    transform: translateX(4px);
+    }
+    .rcp-li{
+    margin-bottom: 2px;
+    font-family: $noto;
+    font-weight: 600;
+    opacity: .8;
+    }
+    .order-sp{
+    font-weight: 600;
+    font-family: $monste;
+    opacity: .8;
+    }
+    .rcp-ttle{
+        font-weight: 600;
+        font-family: $monste;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        opacity: .9;
+    }
+    
+    
+    .rcpt-tb-header{
+    @include space();
+    }
+    
+    .rcpt-headers{
+    
+    font-family: $monste;
+    opacity: .8;
+    font-size: 1.4rem;
+    }
+    .rcpt-tb-header{
+    padding: 2px 0;
+    border-top: 2px solid rgba(0,0,0,.7);
+    border-bottom: 2px solid rgba(0,0,0,.7);
+    margin-bottom: 8px;
+    }
+    .rcpt-namess{
+    font-family: $menucap;
+    color: brown;
+    font-size: 2.5rem;
+    
+    
+    }
+    .rcpt-names{
+    color: $dark-ap;
+    font-weight: 600;
+    font-family: $ptserif;
+    font-size: 1.2rem;
+    opacity: .9;
+    }
+    .rcpt-namex{
+    font-size: 1.4rem;
+    font-family: $ptserif;
+    opacity: .9;
+    font-weight: 600;
+    color: $dark-ap;
+    }
+    .align-rcpt{
+    transform: translateX(-90px);
+    }
+    .rcpt-cart{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    }
+    .rcpt-ordersbx{
+    margin-bottom: 100px;
+    }
+    .type{
+    @include space();
+    padding-right: 20px;
+    }
+    .tobepaid{
+    text-align: right;
+    }
+    .payment-ship{
+    font-family: $monste;
+    font-size: 1.3rem;
+    opacity: .9;
+    font-weight: 800;
+    margin-bottom: 4px;
+    }
+    .payment-info{
+    font-weight: 600;
+    font-family: $noto;
+    opacity: .9;
+    }
+    .cash{
+    font-size: 1.6rem;
+    color: brown;
+    font-weight: 600;
+    font-family: $ptserif;
+    }
+    @media(max-width:840px){
+    .receipt-page{
+    padding: 50px 10px 200px 10px;
+    border: 1px solid black;
+    }
+    .rcpt-headers{
+        font-family: $monste;
+        opacity: .8;
+        font-size: 1.1rem;
+    }
+    .rcpt-namess{
+    font-size: 1.6rem;
+    }
+    .rcpt-names{
+    
+    display: none
+    }
+    .rcpt-namex{
+    font-size: 1.2rem;
+    
+    }
+    .align-rcpt{
+    transform: translateX(-33px);
+    }
+    }
+    

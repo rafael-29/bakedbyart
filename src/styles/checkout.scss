@@ -1,0 +1,92 @@
+.checkout-cont{
+    padding: 100px;
+    }
+    .ch-logoname{
+    font-family: $vibes;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-align: center;
+    color: brown;
+    padding-bottom: 20px;
+    border-bottom: 1px solid brown;
+    }
+    .register-guest{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    }
+    
+    .guest{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    }
+    .ch-form{
+    display: flex;
+    flex-direction: column;  
+    width: 50%;
+    }
+    .ch-head{
+    font-family: $monste;
+    font-size: 2.5rem;
+    opacity: .7;
+    }
+    
+    .form-headcd{
+        font-family: $monste;
+        font-size:2.5rem;
+        opacity: .7;
+      
+    }
+    .ch-cnt{
+    font-family: $noto;
+    font-weight: 600;
+    color: $dark;
+    }
+    .ch-email{
+    font-size: 1.1rem;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid $dark;
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+    .ch-email::placeholder{
+    color:black;
+    font-family: $monste;
+    opacity: .4;
+    }
+    .ch-btn{
+    padding: 6px 10px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: $dark;
+    color: $verylight;
+    cursor: pointer;
+    }
+    .ch-btnbx{
+    @include space();
+    }
+    .ch-btnz{
+        padding: 6px 20px;
+        border: none;
+        outline: none;
+        background: $dark;
+        color: $verylight;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-family: $monste;
+        margin-right: 40px;
+    }
+    .ch-btn:active{
+    color: $dark;
+    background: $verylight;
+    }
+    .ch-btnz:active{
+        color: $dark;
+        background: $verylight;
+        }
+    

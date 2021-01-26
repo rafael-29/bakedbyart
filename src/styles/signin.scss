@@ -1,0 +1,92 @@
+
+// SIGNIN STYLE 
+.signin-page{
+    padding: 80px;
+    }
+    
+    .signin-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+    
+    .sign-cap{
+    font-family: $monste;
+    color: $dark;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    }
+    .member-login{
+    width: 500px;
+    margin-bottom: 50px;
+    }
+    .sign-form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 440px;
+    }
+    .sign-lbl{
+    font-family: $noto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    opacity: .8;
+    }
+    .register{
+    width: 570px;
+    }
+    .sign-cnt{
+    font-weight: 600;
+    opacity: .8;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    }
+    .sign-ul{
+    margin-left: 40px;
+    opacity: .8;
+    letter-spacing: 1px;
+    }
+    .sign-li{
+     font-weight: 600;
+     font-size: 1.1rem;
+    }
+    .sign-input{
+    width: 100%;
+    padding: 6px;
+    font-size: 1.1rem;
+    color: rgba(0,0,0,.8);
+    border: 1px solid rgba(0,0,0,.5);
+    outline: none;
+    }
+    .sign-btn{
+    padding: 3px 18px;
+    border: none;
+    margin-top: 15px;
+    background: $dark;
+    color: white;
+    font-family: $monste;
+    font-size: 1.3rem;
+    cursor: pointer;
+    outline: none;
+    }
+    .sign-btn:active{
+    color: $dark-ap;
+    background: #fff3a7;
+    }
+    @media(max-width: 700px){
+        .signin-page{
+        padding: 100px 15px;
+        }
+        .sign-form{
+        width: 100%;
+        }
+        .member-login{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    
+    }
+    

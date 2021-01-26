@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+// fonts 
+$menucap: 'Redressed', cursive;
+$ptserif: 'PT Serif', serif;
+$noto: 'Noto Sans KR', sans-serif;
+$monste:  'Montserrat', sans-serif;
+$vibes: 'Great Vibes', cursive;
+
+// color
+$dark: #884939;
+$medium: #967248;
+$light: #caa653;
+$verylight:#fff3a7;
+$blue-ap: #b1e0da;
+$dark-ap: #311716;
+
+// mixins
+@import "./mixinss.scss";
+
+// HEADER
+@import "./header.scss";
+
+// LOADING SCREEN
+.loadingscreen{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+@include align();
+background-color: white;
+
+}
+.invi{
+visibility: hidden;
+}
+.img-loadbx{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 140px;
+    width: 140px;
+.img-load{
+    height: 100%;
+    width: 100%;
+}
+}
+.load-cont{
+@include align();
+flex-direction: column;
+}
+
+// BANNER // ON DEVELOPMENT
+.banner-container{
+height: 100vh;
+@include align();
+color: $dark;
+}
+
+.billing-bx{
+padding: 20px 15px;
+border: 1px solid rgba(0,0,0,.3);
+}
+.cod{
+transform: scale(1.4);
+color: brown;
+margin-right: 5px;
+}
+.lbl-cod{
+font-size: 1.2rem;
+font-family: $ptserif;
+color: rgba(0,0,0,.7);
+margin-right: 30px;
+cursor: pointer;
+
+}
+
+// REGISTER PAGE
+.register-page{
+padding: 100px;
+}
+.reg-first, .reg-second{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+width: 560px;
+
+}
+.reg-cnt{
+padding-right: 50px;
+font-size: 1.1rem;
+opacity: .8;
+color: $dark;
+font-weight: 600;
+margin-bottom: 15px;
+}
+.reg-form{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+.member-login{
+margin-bottom: 15px;
+}
+.reg-input{
+padding: 4px;
+font-size: 1.2rem;
+opacity: .8;
+outline: none;
+}
+.regn{
+margin-right: 5px;
+}
+.regfull{
+width: 91%
+}
+.reg-namebx{
+margin-bottom: 5px;
+}
+@media(max-width: 900px){
+.regn{
+margin-bottom: 5px;
+}
+.register-page{
+padding: 80px 20px;
+}
+.reg-input{
+    padding: 4px;
+    font-size: 1.2rem;
+    opacity: .8;
+    outline: none;
+    width: 100%;
+}
+.regfull{
+    width: 100%;
+}
+.reg-namebx{
+width: 100%;
+}
+}
+
+
+@import "./signin.scss";
+
+// RECEIPT STYLING
+@import "./receipt.scss";
+
+// FOOTER STYLING
+@import "./footer.scss";
+
+// CART PAGE
+@import "./cart.scss";
+
+// CHOICES BANANABREADS AND COOKIES
+@import "./choices.scss";
+
+// GALLERY
+@import "./gallery.scss";
+
+// ORDER SUMMARY NG CART
+@import "./order.scss";
+
+// COLLECTION STYLES
+@import "./collection.scss";
+
+///// CHECKOUT
+@import "./checkout.scss";
+
+// SHIPPING ADDRESS
+@import "./shipping.scss";
+
+// ALL MEDIA QUERIES
+@import "./mediaq.scss";

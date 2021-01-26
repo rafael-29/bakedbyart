@@ -1,0 +1,57 @@
+
+// FOOTER STYLE
+footer{
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $blue-ap;
+    
+    }
+    .footer-logobx{
+    height: 150px;
+    width: 150px;
+    .footer-logoimg{
+    height: 100%;
+    width: 100%
+    }
+    }
+    
+    .custom-tell, .footer-categ{
+    color: $dark-ap;
+    }
+    .cst-one{
+    margin-bottom: 20px;
+    }
+    .custom-head{
+    font-family: $monste;
+    font-weight: 700;
+    font-size: 1.2rem;
+    }
+    .custom-cnt{
+    font-family: $noto;
+    font-weight: 700;
+    color: $dark-ap;
+    }
+    .footer-a{
+    text-decoration: none;
+    font-family: $ptserif;
+    color: brown;
+    font-size: 1.1rem;
+    }
+    .footer-nav{
+    list-style: none;
+    }
+    .footer-li{
+    margin-bottom: 10px;
+    
+    }
+    .copyright{
+    background: #311716;
+    color: $verylight;
+    text-align: center;
+    padding: 10px;
+    font-family: $monste;
+    
+    }
+    

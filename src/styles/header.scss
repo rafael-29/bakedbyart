@@ -1,0 +1,57 @@
+
+header{
+.fa-shopping-cart{
+position: relative;
+}
+    .class-length{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+padding: 1px 6px;
+border-radius: 50%;
+    font-size: 1rem;
+    font-family: $ptserif;
+    font-weight: 600;
+    background: white;
+    color: brown;
+    }
+
+    @include space();
+    padding: 15px 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    }
+    .link-logo{
+    text-decoration: none;
+    outline: none;
+    font-family: $vibes;
+    letter-spacing: 2px;
+    font-size: 2.6rem;
+    color: brown;
+    }
+       .link-logo:active{
+        text-decoration: none;
+        outline: none;
+        font-family: $vibes;
+        letter-spacing: 2px;
+        font-size: 2.6rem;
+        color: $verylight;
+    }
+    .header-ul{
+    list-style: none;
+    @include align();
+    font-family: $menucap;
+    .header-li{
+    margin-left: 20px;
+    position: relative;
+    }
+    }
+    .link-cart{
+    text-decoration: none;
+    font-size: 2rem;
+    color: brown;
+    }
+    
+    
