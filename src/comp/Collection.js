@@ -9,7 +9,7 @@ const Collection = () => {
 return(
 <div className="collec-page">
 
-<h1 className="all-prod">All Collections</h1>
+<h1 className="all-prod">Made by hand, from scratch with love</h1>
 
 <div className="collections">
 

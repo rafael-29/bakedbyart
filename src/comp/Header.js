@@ -6,7 +6,7 @@ export default function Header() {
 const cartz = JSON.parse(localStorage.getItem('carts'))
 
 return(
-<header>
+<header style={{position: 'relative', zIndex: '3'}}>
 
 <h2 className="logo-name">
 <Link className="link-logo" to="/">Baked.By.Art</Link>

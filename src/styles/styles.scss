@@ -55,12 +55,59 @@ visibility: hidden;
 flex-direction: column;
 }
 
-// BANNER // ON DEVELOPMENT
-.banner-container{
+// BANNER PAGE
+.mobobanner-page{
+position: relative;
 height: 100vh;
-@include align();
-color: $dark;
+z-index: 1;
+display: none;
+.mobo-bannimg{
+height: 100%;
+width: 100%;
 }
+}
+
+.mobo-banner-cntbx{
+position: absolute;
+bottom: 30%;
+text-align: center;
+left: 0;
+width: 100%;
+z-index: 22;
+}
+.mobo-banner-p{
+font-family: $monste;
+color: #fff3a7;
+font-size: 1.2rem;
+font-weight: 600;
+background: #703423;
+width: 400px;
+padding: 6px 0;
+margin: 0 auto;
+}
+.mobo-banner-btn{
+background:#703423;
+border: none;
+color:#fff3a7 ;
+outline: none;
+font-size: 1.1rem;
+padding: 4px 10px;
+font-weight: 600;
+font-family: $monste;
+cursor: pointer;
+position: relative;
+z-index: 22;
+}
+.mobo-banner-btnbx{
+margin-top: 20px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+cursor: pointer;
+position: relative;
+z-index: 22;
+}
+
 
 .billing-bx{
 padding: 20px 15px;

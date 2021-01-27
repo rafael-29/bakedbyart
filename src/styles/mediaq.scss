@@ -1,5 +1,10 @@
 // THE MEDIA QUERY
 @media(max-width: 900px){
+// FOOTER
+.custom-tell{
+display: none;
+}
+
 
     // BUNDLE ORDER FOR BANANA BREADS
         .bndl-imgbx{
@@ -182,5 +187,18 @@
             width: 100%;
             }
         }
-        
-        }
+
+.collec-page{
+display: none;
+margin-bottom: 50px;
+}
+.mobobanner-page{
+display: flex;
+}
+
+
+// BUNDLE
+.left-bndl{
+display: none;
+}
+}

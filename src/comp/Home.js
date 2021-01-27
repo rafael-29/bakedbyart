@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Bundle from './Bundle';
+import Collection from './Collection'
+import Mobobanner from './Mobobanner';
 
 const banana = 'banana-breads';
 const cookies = 'cookies';
@@ -196,41 +198,6 @@ setBundle({...bundle, cost: bundle.chosen === full ? 1000 : 600})
 const bananaMenu = () => (
 <div className="banana-breads">
 
-{/* <div className="flex-cont">
-{
-bananaBreads.map(bread => (
-<div className="bread-cont" key={bread.id}>
-<div className="bread-imgbx">
-<img src={bread.image} alt="baked.by.art" className="img-bread"/>
-</div>
-<div className="bread-cnt">
-    <div className="bread-name">{bread.name}</div>
-    <div className="bread-subname">{bread.subname}</div>
-
-    <div className="price">Price: ₱{bread.cost*bread.qnty}</div>
-        <div className="qnty-bx">
-          
-                <div className="qnty-cap">Quantity:</div>
-
-                <div className="qnty-cont">
-                    <div className="qntys">{bread.qnty}</div>
-
-                    <div className="qnty-btns">
-                        <button onClick={() => addqnty(bread)} className="qnty-btn"><i className="fas fa-plus"></i></button>
-                        <button onClick={() => deduct(bread)} className="qnty-btn"><i className="fas fa-minus"></i></button>
-                    </div>
-                </div>
-            
-        </div>
-    
-    <button onClick={() => addTo(bread)} className="addtocart">ADD TO CART</button>
-    <button className="openmenu">OPEN ALL MENU</button>
-    </div>
-</div>
-))
-}
-</div> */}
-
     <div className="bundle-order">
 
         <div className="bndl-imgbx">
@@ -329,11 +296,10 @@ return(
 <div>
 
 
-<div className="banner-container">
-<h1>ON DEVELOPMENT WEBSITE</h1>
-</div>
+<Collection />
+<Mobobanner />
 
-<ul className="bread-choice">
+<ul style={{marginTop: '60px'}} className="bread-choice">
 <li>
 <button className={page === banana ? 'active' : 'not-active'}
 onClick={() => setPage(banana)}>Banana Breads</button>

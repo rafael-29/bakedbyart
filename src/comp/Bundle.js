@@ -28,7 +28,7 @@ className="left-img"/>
 
             <div className="right-bx">
             <div className="right-side">
-            <img src="/images/gallerytwo.jpg" alt="" className="right-img" />
+            <img src="/images/bananaloaves.jpg" alt="" className="right-img" />
             </div>
 
             <div className="top-cnt">insert content here, and here</div>

@@ -49,8 +49,8 @@ header .class-length {
   text-decoration: none;
   outline: none;
   font-family: "Great Vibes", cursive;
-  letter-spacing: 2px;
-  font-size: 2.6rem;
+  letter-spacing: 4px;
+  font-size: 2.4rem;
   color: brown;
 }
 
@@ -86,6 +86,18 @@ header .class-length {
   text-decoration: none;
   font-size: 2rem;
   color: brown;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 10px;
+  }
+  .link-logo {
+    font-size: 1.6rem;
+  }
+  .header-ul {
+    display: none;
+  }
 }
 
 .loadingscreen {
@@ -138,18 +150,65 @@ header .class-length {
           flex-direction: column;
 }
 
-.banner-container {
+.mobobanner-page {
+  position: relative;
   height: 100vh;
+  z-index: 1;
+  display: none;
+}
+
+.mobobanner-page .mobo-bannimg {
+  height: 100%;
+  width: 100%;
+}
+
+.mobo-banner-cntbx {
+  position: absolute;
+  bottom: 30%;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  z-index: 22;
+}
+
+.mobo-banner-p {
+  font-family: "Montserrat", sans-serif;
+  color: #fff3a7;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: #703423;
+  width: 400px;
+  padding: 6px 0;
+  margin: 0 auto;
+}
+
+.mobo-banner-btn {
+  background: #703423;
+  border: none;
+  color: #fff3a7;
+  outline: none;
+  font-size: 1.1rem;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 22;
+}
+
+.mobo-banner-btnbx {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #884939;
+  cursor: pointer;
+  position: relative;
+  z-index: 22;
 }
 
 .billing-bx {
@@ -1551,7 +1610,7 @@ footer {
 }
 
 .collec-page {
-  padding: 100px;
+  padding: 100px 100px;
 }
 
 .all-prod {
@@ -1571,12 +1630,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 900px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 50px auto;
 }
 
 .banana-coll, .cookie-coll {
-  margin: 0 40px;
+  margin: 25px 40px;
   -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -2129,6 +2189,9 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .custom-tell {
+    display: none;
+  }
   .bndl-imgbx {
     display: none;
   }
@@ -2338,6 +2401,18 @@ footer {
   .another-imgbx .another-img {
     height: 100%;
     width: 100%;
+  }
+  .collec-page {
+    display: none;
+    margin-bottom: 50px;
+  }
+  .mobobanner-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .left-bndl {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

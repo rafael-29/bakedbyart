@@ -1,6 +1,6 @@
 ///// Collections Page
 .collec-page{
-    padding: 100px;
+    padding: 100px 100px;
     }
     .all-prod{
     text-align: center;
@@ -10,11 +10,11 @@
     }
     .collections{
     @include align();
-    width: 900px;
+    flex-wrap: wrap;
     margin: 50px auto;
     }
     .banana-coll, .cookie-coll{
-    margin: 0 40px;
+    margin: 25px 40px;
     box-shadow: 1px 2px 5px rgba(0,0,0,.3);
     cursor: pointer;
     }
