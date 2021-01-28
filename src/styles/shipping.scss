@@ -8,6 +8,24 @@
     align-items: flex-start;
     flex-wrap: wrap;
     }
+    // BILLING
+.billing-bx{
+    padding: 20px 15px;
+    border: 1px solid rgba(0,0,0,.3);
+    }
+    .cod{
+    transform: scale(1.4);
+    color: brown;
+    margin-right: 5px;
+    }
+    .lbl-cod{
+    font-size: 1.2rem;
+    font-family: $ptserif;
+    color: rgba(0,0,0,.7);
+    margin-right: 30px;
+    cursor: pointer;
+    
+    }
     
     // SHIP FORM CONTACT
     .shipform-cont{

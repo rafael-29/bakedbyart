@@ -276,26 +276,6 @@ header .class-length {
   font-size: 1.2rem;
 }
 
-.billing-bx {
-  padding: 20px 15px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.cod {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  color: brown;
-  margin-right: 5px;
-}
-
-.lbl-cod {
-  font-size: 1.2rem;
-  font-family: "PT Serif", serif;
-  color: rgba(0, 0, 0, 0.7);
-  margin-right: 30px;
-  cursor: pointer;
-}
-
 .register-page {
   padding: 100px;
 }
@@ -1897,6 +1877,26 @@ footer {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.billing-bx {
+  padding: 20px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.cod {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  color: brown;
+  margin-right: 5px;
+}
+
+.lbl-cod {
+  font-size: 1.2rem;
+  font-family: "PT Serif", serif;
+  color: rgba(0, 0, 0, 0.7);
+  margin-right: 30px;
+  cursor: pointer;
 }
 
 .shipform-cont {

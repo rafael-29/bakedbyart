@@ -19,7 +19,7 @@ return(
 {
 thebananaz.map(banana => (
 <div key={banana.id} className="themenu-bx">
-<Link className="link-menu" to="/bananainfo">
+<Link className="link-menu" to={`/bananasinfo/${banana.id}`}>
     <div className="menu-imgbx">
         <img src={banana.image} alt="baked.by.art"
         className="img-bananaimg" />    

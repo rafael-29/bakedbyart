@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import Bundle from './Bundle';
 import Collection from './Collection'
 import Mobobanner from './Mobobanner';
@@ -19,24 +18,7 @@ const Home = () => {
 // for rendering pages
 const [page, setPage] = useState(banana)
 
-const [bananaBreads, setBananabre] = useState([
-    {
-        id: 101,
-        name: 'Banana Loaf',
-        cost: 200,
-        qnty: 1,
-        image: 'images/bananaloaves.jpg',
-        subname: 'banana Loaves with hazzlenuts'
-        },
-        {
-        id: 102,
-        name: 'Cream cheese',
-        cost: 225,
-        qnty: 1,
-        image: 'images/creamcheese.jpg',
-        subname: 'banana Loaves with cream cheese'
-        }
-])
+
 const [cookiesBread, setCookies] = useState([
     {
         id: 201,
@@ -64,7 +46,7 @@ const [bundle, setBundle] = useState({
     image: 'images/collectiontwo.jpg',
     subname: 'assorted flavors of Banana Breads'
 })
-const [bundleqty, setbundleqty] = useState([full, half])
+const [bundleqty] = useState([full, half])
 
 //////// FUNCTIONS
 
@@ -72,48 +54,7 @@ const changeCost = (e) => {
 setBundle({...bundle, chosen: e.target.value})
 }
 
-const addTo = (e) => {
 
-axios.get('http://localhost:5000/cart')
-.then( rslts => {
-const data = rslts.data;
-
-const found = data.some(dat => dat.name === e.name)
-
-if(found){
-
-const find = data.find(det => det.name === e.name)
-
-const thesum = e.cost*e.qnty;
-const finalcost = thesum+find.cost;
-const toUpdate = {
-    name: e.name,
-    cost: finalcost,
-    qnty: e.qnty+find.qnty,
-    subname: e.subname,
-    image: e.image
-}
-
-axios.put(`http://localhost:5000/cart/${e.name}`, toUpdate)
-.then( () => log('update success'))
-.catch(err => log(err))
-
-}else{
-const toSave = {
-    name: e.name,
-    cost: e.cost*e.qnty,
-    qnty: e.qnty,
-    subname: e.subname,
-    image: e.image
-}
-
-axios.post('http://localhost:5000/cart/add', toSave)
-.then( () => log('success saving'))
-.catch(err => log(err))
-}
-
-})
-}
 
 const addBundleOrder = (e) => {
 
@@ -139,23 +80,6 @@ localStorage.setItem('carts', JSON.stringify(items))
 alert('One Item Is Added To The Cart')
 window.location.reload();
 }
-
-// add qnty bread
-// const addqnty = (e) => {
-// setBananabre(bananaBreads.map(bnana => bnana.name === e.name ? {...bnana, qnty: bnana.qnty+1} : bnana))
-// }
-// // deduct qnty bread
-// const deduct = (e) => {
-// const find = bananaBreads.find(bnana => bnana.name  === e.name);
-
-// if(find.qnty === 1){
-// setBananabre(bananaBreads.map(bnana => bnana.name === e.name ? {...bnana, qnty: 1} : bnana))
-// }else{
-// setBananabre(bananaBreads.map(bnana => bnana.name === e.name ? {...bnana, qnty: bnana.qnty -1} : bnana))
-// }
-
-// }
-
 
 // add qnty cookie
 const addqntycookie = (e) => {
@@ -213,7 +137,7 @@ const bananaMenu = () => (
 
             <div className="another-imgbx">
                 <img src="/images/collectionone.jpg"
-                className="another-img" />
+                className="another-img"alt="baked.by.art" />
             </div>
 
             <div>

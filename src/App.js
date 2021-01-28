@@ -92,8 +92,8 @@ const renderBananaMenu = () => (
 <Bananamenus thebananaz={thebananaz} setThebananaz={setThebananaz}/>
 )
 
-const renderBananasInfo = () => (
-<BananasInfo />
+const renderBananasInfo = (props) => (
+<BananasInfo theprops={props} thebananaz={thebananaz} setThebananaz={setThebananaz} />
 )
 
 return(
@@ -114,7 +114,7 @@ return(
 <Route path="/signin" exact component={Signin} />
 <Route path="/signin/register" exact component={Register} />
 <Route path="/bananamenu" render={renderBananaMenu} />
-<Route path="/breadsinfo" render={renderBananasInfo} />
+<Route path="/bananasinfo/:id" render={renderBananasInfo} />
 
 
 </Router>

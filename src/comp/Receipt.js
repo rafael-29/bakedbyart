@@ -114,22 +114,10 @@ return(
 )
 
 }
-
-
-
-const renderLoad = () => (
-    <h1>Loading ...</h1>
-)
-
-
-
 const gothere = () => {
 localStorage.clear()
 window.location.replace('/')
 }
-
-
-
 
 ////////////// RETURN OF JSX
 return(

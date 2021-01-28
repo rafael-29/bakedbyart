@@ -1,0 +1,67 @@
+// REGISTER PAGE
+.register-page{
+    padding: 100px;
+    }
+    .reg-first, .reg-second{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 560px;
+    }
+    .reg-cnt{
+    padding-right: 50px;
+    font-size: 1.1rem;
+    opacity: .8;
+    color: $dark;
+    font-weight: 600;
+    margin-bottom: 15px;
+    }
+    .reg-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+    .member-login{
+    margin-bottom: 15px;
+    }
+    .reg-input{
+    padding: 4px;
+    font-size: 1.2rem;
+    opacity: .8;
+    outline: none;
+    }
+    .regn{
+    margin-right: 5px;
+    }
+    .regfull{
+    width: 91%
+    }
+    .reg-namebx{
+    margin-bottom: 5px;
+    }
+    @media(max-width: 900px){
+    .regn{
+    margin-bottom: 5px;
+    }
+    .register-page{
+    padding: 80px 20px;
+    }
+    .reg-input{
+        padding: 4px;
+        font-size: 1.2rem;
+        opacity: .8;
+        outline: none;
+        width: 100%;
+    }
+    .regfull{
+        width: 100%;
+    }
+    .reg-namebx{
+    width: 100%;
+    }
+    }
+    
+    

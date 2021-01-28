@@ -11,12 +11,6 @@ const [guest, setGuest] = useState('');
 const [login, setLogin] = useState();
 const [pass, setPass] = useState();
 
-const [isLogin, setIsLogin] = useState(false);
-
-
-
-
-
 
 // FUNCTIONSSS
 
