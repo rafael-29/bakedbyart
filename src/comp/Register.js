@@ -46,7 +46,7 @@ return(
         <Link style={{textDecoration: 'none', color: 'brown'}} to="/">Baked.By.Art</Link>
 </h1>
     <h3 className="sign-cap">Online Account Registration</h3>
-    <p className="reg-cnt">To register as a member of Mrs. Fields online, simply complete the form below.
+    <p className="reg-cnt">To register as a member of Baked.By.Art, simply complete the form below.
 Please note: You must be 18 years of age or older to register an account.</p>
 
 

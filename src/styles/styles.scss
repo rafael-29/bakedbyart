@@ -76,14 +76,15 @@ width: 100%;
 z-index: 22;
 }
 .mobo-banner-p{
-font-family: $monste;
-color: #fff3a7;
+font-family: $vibes;
+color: brown;
 font-size: 1.2rem;
 font-weight: 600;
-background: #703423;
+background:white;
 width: 400px;
 padding: 6px 0;
 margin: 0 auto;
+
 }
 .mobo-banner-btn{
 background:#703423;
@@ -107,8 +108,55 @@ cursor: pointer;
 position: relative;
 z-index: 22;
 }
+// BANANA MENU PAGE
+.menu-page{
+padding: 100px;
+}
+.menu-page-ttle{
+text-align: center;
+font-family: $ptserif;
+color: brown;
+margin-bottom: 50px;
+}
+.menu-imgbx{
+height: 240px;
+width: 240px;
+overflow: hidden;
+transition: .4s;
+.img-bananaimg{
+height: 100%;
+width: 100%;
+transition: .4s;
+}
+}
+.menu-imgbx:hover .img-bananaimg{
+transform: scale(1.2);
+transition: .4s;
+}
+.menu-container{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+}
+.themenu-bx{
+margin: 30px 50px;
+}
+.link-menu{
+text-decoration: none;
+}
+.menu-cnt{
+color: brown;
+font-family: $monste;
+font-size: 1.1rem;
 
+padding: 5px;
+}
+.menu-name{
+font-size: 1.2rem;
+}
 
+// BILLING
 .billing-bx{
 padding: 20px 15px;
 border: 1px solid rgba(0,0,0,.3);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from "./comp/Header";
 import Home from "./comp/Home";
@@ -10,13 +10,57 @@ import Footer from './comp/Footer';
 import Receipt from './comp/Receipt';
 import Signin from './comp/Signin';
 import Register from './comp/Register';
+import Bananamenus from './comp/Bananamenus';
+import BananasInfo from './comp/BananasInfo';
 
 
 import "./styles/styles.css";
 
 const App = () => {
 
-
+const [thebananaz, setThebananaz] = useState([
+        {
+        id: 401,
+        name: 'Menu One',
+        subname: 'wala pa',
+        cost: 170,
+        qnty: 1,
+        image: '/images/bmenuone.png'
+        },
+        {
+        id: 402,
+        name: 'Menu Two',
+        subname: 'wala pa',
+        cost: 170,
+        qnty: 1,
+        image: '/images/halfbanana.jpg'
+        },
+        {
+        id: 403,
+        name: 'Menu Three',
+        subname: 'wala pa',
+        cost: 170,
+        qnty: 1,
+        image: '/images/bmenuthree.jpg'
+        },
+        {
+        id: 404,
+        name: 'Menu Four',
+        subname: 'wala pa',
+        cost: 170,
+        qnty: 1,
+        image: '/images/bmenufour.jpg'
+        },
+        {
+        id: 405,
+        name: 'Menu Five',
+        subname: 'wala pa',
+        cost: 170,
+        qnty: 1,
+        image: '/images/bmenufive.jpg'
+        },
+])
+   
 
 
 const renderHome = () => (
@@ -44,7 +88,13 @@ const renderShip = () => (
 <Shipping />
 )
 
+const renderBananaMenu = () => (
+<Bananamenus thebananaz={thebananaz} setThebananaz={setThebananaz}/>
+)
 
+const renderBananasInfo = () => (
+<BananasInfo />
+)
 
 return(
 <div>
@@ -63,6 +113,8 @@ return(
 <Route path="/receipt" component={Receipt} />
 <Route path="/signin" exact component={Signin} />
 <Route path="/signin/register" exact component={Register} />
+<Route path="/bananamenu" render={renderBananaMenu} />
+<Route path="/breadsinfo" render={renderBananasInfo} />
 
 
 </Router>

@@ -172,11 +172,11 @@ header .class-length {
 }
 
 .mobo-banner-p {
-  font-family: "Montserrat", sans-serif;
-  color: #fff3a7;
+  font-family: "Great Vibes", cursive;
+  color: brown;
   font-size: 1.2rem;
   font-weight: 600;
-  background: #703423;
+  background: white;
   width: 400px;
   padding: 6px 0;
   margin: 0 auto;
@@ -209,6 +209,71 @@ header .class-length {
   cursor: pointer;
   position: relative;
   z-index: 22;
+}
+
+.menu-page {
+  padding: 100px;
+}
+
+.menu-page-ttle {
+  text-align: center;
+  font-family: "PT Serif", serif;
+  color: brown;
+  margin-bottom: 50px;
+}
+
+.menu-imgbx {
+  height: 240px;
+  width: 240px;
+  overflow: hidden;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.menu-imgbx .img-bananaimg {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.menu-imgbx:hover .img-bananaimg {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.themenu-bx {
+  margin: 30px 50px;
+}
+
+.link-menu {
+  text-decoration: none;
+}
+
+.menu-cnt {
+  color: brown;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.menu-name {
+  font-size: 1.2rem;
 }
 
 .billing-bx {
