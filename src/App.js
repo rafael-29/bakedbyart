@@ -21,16 +21,16 @@ const App = () => {
 const [thebananaz, setThebananaz] = useState([
         {
         id: 401,
-        name: 'banana breads delightes',
-        subname: 'wala pa',
+        name: 'banana Loaf',
+        subname: 'banana loaf with cream cheese',
         cost: 170,
         qnty: 1,
         image: '/images/bmenuone.png'
         },
         {
         id: 402,
-        name: 'banana breads delighto',
-        subname: 'wala pa',
+        name: 'vegan banana loaf',
+        subname: 'walang def',
         cost: 170,
         qnty: 1,
         image: '/images/halfbanana.jpg'
@@ -38,7 +38,7 @@ const [thebananaz, setThebananaz] = useState([
         {
         id: 403,
         name: 'banana breads delightree',
-        subname: 'wala pa',
+        subname: 'with wallnuts + choco chips',
         cost: 170,
         qnty: 1,
         image: '/images/bmenuthree.jpg'

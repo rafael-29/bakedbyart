@@ -34,7 +34,7 @@ const [cookiesBread, setCookies] = useState([
         cost: 41,
         qnty: 6,
         image: 'images/chocomacadamia.jpg',
-        subname: 'this cookie is mixed with white nuts'
+        subname: 'this cookie is mixed with white chocolate chips'
         }
         
 ])

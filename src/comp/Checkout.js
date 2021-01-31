@@ -39,11 +39,6 @@ return(
     <div className="guest">
         <div className="ch-head">GUEST CHECKOUT</div>
         <div className="ch-cnt">You will be able to register your account at the end of checkout.</div>
-        <div className="ch-ben">Benefits of Baked.By.Art account:</div>
-        <ul className="ch-ul">
-            <li className="ch-li">Expedited Checkout Process</li>
-            <li className="ch-li">Exclusive Offers</li>
-        </ul>
         <form className="ch-formz" onSubmit={addEmailToLocal}>
         <input type="email" className="ch-email" placeholder="Enter Email Address" 
         value={guest} onChange={e => setGuest(e.target.value)} required />

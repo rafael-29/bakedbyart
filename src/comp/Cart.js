@@ -123,7 +123,7 @@ const renderSum = () => (
             </div>
 
             <div className="prom-code">
-                <div className="have-promo">Promotion Code ?</div>
+                <div className="have-promo">Promo Code ?</div>
                 
                 <input type="text" className="promoTxt"
                 value={code} onChange={e => setCode(e.target.value)}/>
