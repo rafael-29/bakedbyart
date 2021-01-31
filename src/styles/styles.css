@@ -150,6 +150,196 @@ header .class-length {
           flex-direction: column;
 }
 
+.admin-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.fa-user-lock {
+  color: brown;
+  font-size: 1.5rem;
+}
+
+.admin-signbx {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  z-index: 22;
+}
+
+.admin-form {
+  height: auto;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 10px 15px 10px;
+  width: 300px;
+}
+
+.admin-imgbx {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.admin-imgbx .adminimg {
+  height: 100%;
+  width: 100%;
+}
+
+.admin-input-dev {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.admin-input {
+  padding: 6px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  opacity: .8;
+  border: none;
+}
+
+.admin-input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+}
+
+.admin-input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+}
+
+.admin-input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+}
+
+.admin-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+}
+
+.admin-btnz {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.admin-subcan {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  background: skyblue;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 7px;
+  font-size: 1.3rem;
+}
+
+.can {
+  background: crimson;
+  color: white;
+}
+
+.test-home {
+  position: relative;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 600px;
+  z-index: 2;
+}
+
+.test-home .test-img {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+
+.madebyhand-bx {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 55;
+}
+
+.madebyhand {
+  font-size: 3rem;
+  color: #b1e0da;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 4;
+}
+
+.the-logobx {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+}
+
+.the-logobx .the-logoimg {
+  height: 100%;
+  width: 100%;
+}
+
 .mobobanner-page {
   position: relative;
   height: 100vh;
@@ -418,6 +608,7 @@ header .class-length {
   color: brown;
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
+  width: 240px;
   padding: 5px;
 }
 
@@ -657,7 +848,7 @@ header .class-length {
 }
 
 .date {
-  width: 120px;
+  width: 170px;
   overflow: hidden;
   height: 24px;
   font-family: "Noto Sans KR", sans-serif;
@@ -2416,6 +2607,13 @@ footer {
     -webkit-box-shadow: 2px 3px 13px rgba(0, 0, 0, 0.3);
             box-shadow: 2px 3px 13px rgba(0, 0, 0, 0.3);
   }
+  .the-logobx {
+    height: 120px;
+    width: 120px;
+  }
+  .madebyhand {
+    font-size: 2.7rem;
+  }
   .cart-page {
     padding: 0 50px 800px 50px;
     margin-top: 20%;
@@ -2529,6 +2727,23 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .test-home {
+    display: none;
+  }
+  .footer-categ {
+    display: none;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .cart-headingone {
     width: 100%;
     border-radius: 0;

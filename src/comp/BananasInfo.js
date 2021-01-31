@@ -55,7 +55,7 @@ return(
                     <p className="info-costnqnty">Total Amount: {`$${details.cost*details.qnty}`}</p>
                 </div>
             </div>
-            <p className="info-qnty">Quantity: {details.qnty > 1 ? `${details.qnty}pieces` : `${details.qnty}piece`}</p>
+            <p className="info-qnty">Quantity: {details.qnty > 1 ? `${details.qnty} pieces` : `${details.qnty} piece`}</p>
             <div className="info-btnz">
                         <button className="info-btn" onClick={() => addQty(details)}>ADD QUANTITY</button>
                         {details.qnty > 1 ? <button className="info-btn minus" onClick={() => deductQnty(details)}>DEDUCT QUANTITY</button> : <> </> }

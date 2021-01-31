@@ -17,7 +17,14 @@ display: none;
             height: auto;
             box-shadow: 2px 3px 13px rgba(0,0,0,.3);
         }
-    
+    // test home page
+.the-logobx{
+height: 120px;
+width: 120px;
+}
+.madebyhand{
+font-size: 2.7rem;
+}
     //// cart page
         .cart-page{
         padding: 0 50px 800px 50px;
@@ -110,16 +117,28 @@ display: none;
                     
         }
         
-        @media(max-width: 700px){
-            .cart-headingone{
-                width: 100%;
-                border-radius: 0;
-                font-size: 1.2rem;
-                }
-                .fa-home{
-                    font-size: 2rem;
-                    color: brown;
-                }
+@media(max-width: 700px){
+    .test-home{
+    display: none;
+    }
+    // FOOTER
+    .footer-categ{
+    display: none;
+    }
+    footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .cart-headingone{
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.2rem;
+    }
+    .fa-home{
+        font-size: 2rem;
+        color: brown;
+    }
     // cart image sizes
     .cart-page{
     padding: 0 50px 800px 50px;

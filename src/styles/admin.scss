@@ -1,0 +1,86 @@
+.admin-btn{
+position: absolute;
+top: 20px;
+right: 20px;
+border: none;
+outline: none;
+background: none;
+cursor: pointer;
+}
+.fa-user-lock{
+color: brown;
+font-size: 1.5rem;
+}
+.admin-signbx{
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+@include align();
+background-color: white;
+z-index: 22;
+}
+
+.admin-form{
+height: auto;
+background: whitesmoke;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 40px 10px 15px 10px;
+width: 300px;
+}
+.admin-imgbx{
+height: 110px;
+width: 110px;
+border-radius: 50%;
+overflow: hidden;
+margin-bottom: 10px;
+.adminimg{
+height: 100%;
+width: 100%;
+}
+}
+.admin-input-dev{
+margin-bottom: 5px;
+width: 100%;
+}
+.admin-input{
+padding: 6px;
+outline: none;
+border: 1px solid rgba(0,0,0,.7);
+width: 100%;
+text-align: center;
+font-family: $monste;
+font-size: 1.2rem;
+opacity: .8;
+border: none;
+}
+.admin-input::placeholder{
+font-family: $monste;
+font-size: 1.1rem;
+}
+.admin-btnz{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.admin-subcan{
+border: none;
+padding: 8px ;
+width: 100%;
+background: skyblue;
+color: white;
+font-family: $monste;
+cursor: pointer;
+outline: none;
+border-radius: 10px;
+margin-bottom: 7px;
+font-size: 1.3rem;
+}
+.can{
+background: crimson;
+color: white;
+}

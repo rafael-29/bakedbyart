@@ -218,9 +218,21 @@ cookiesBread.map(bread => (
 //// START OF RETURNING HTML
 return(
 <div>
+{}
+<div className="test-home">
+    <img src="/images/testwalltwo.jpg" 
+    alt='baked.by.art' className="test-img" />
+    <div className="madebyhand-bx">
+    
+        <div className="the-logobx">
+            <img src="/images/april.png" alt="baked.by.art"
+            className="the-logoimg" />
+        </div>
 
+        <p className="madebyhand">made by hand, from scratch, with love</p>
+    </div>
+</div>
 
-<Collection />
 <Mobobanner />
 
 <ul style={{marginTop: '60px'}} className="bread-choice">

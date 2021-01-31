@@ -64,7 +64,7 @@ JSON.parse(localStorage.getItem('carts')).map(crt => (
         <div className="crt-name">{crt.name}</div>
         <div className="crt-subname">{crt.subname}</div>
 
-        <div className="qnty">Qnty: {!crt.qnty ? `${crt.chosen}` : `${crt.qnty}${crt.qnty === 1 ? 'pc of bread' : 'pcs of bread'}`}</div>
+        <div className="qnty">Quantity: {!crt.qnty ? `${crt.chosen}` : `${crt.qnty}${crt.qnty === 1 ? 'pc of bread' : 'pcs of bread'}`}</div>
 
         <div className="crt-btns">
         <button onClick={() => remove(crt)} className="crt-btn rem">remove <i className="fas fa-trash-alt"></i></button>

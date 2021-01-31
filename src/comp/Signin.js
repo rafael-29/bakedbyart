@@ -8,15 +8,64 @@ const Signin = () => {
 const [signemail, setSignEmail] = useState()
 const [signpass, setSignPass] = useState()
 
+const [admin, setAdmin] = useState(false)
+
+const [adminUser, setAdminUser] = useState()
+const [adminPass, setAdminPass] = useState()
 
 //FUNCITONS
 const register = () => {
 window.location.replace('/signin/register')
 }
 
+const adminAuth = () => {
+
+}
+
+// CLOSING ADMIN SIGN IN PAGE
+const closeAdmin = () => {
+setAdmin(false)
+window.document.querySelector('body').style.overflow = "visible"
+}
+
+const renderAdmin = () => {
+
+window.document.querySelector('body').style.overflow = 'hidden';
+return(
+<div className="admin-signbx">
+    <div className="admin-form">
+        <div className="admin-imgbx">
+            <img src="/images/april.png" alt="baked.by.art"
+            className="adminimg" />
+        </div>
+
+        <div className="admin-input-dev">
+            <input placeholder="username" type="text" value={adminUser}
+            onChange={e => setAdminUser(e.target.value)}
+            className="admin-input" />
+        </div>
+
+        <div className="admin-input-dev">
+            <input placeholder="password" type="password" value={adminPass}
+            onChange={e => setAdminPass(e.target.value)}
+            className="admin-input" />
+        </div>
+
+        <div className="admin-btnz">
+        <button className="admin-subcan" onClick={adminAuth}>SUBMIT</button>
+        <button className="admin-subcan can" onClick={closeAdmin}>CANCEL</button>
+        </div>
+
+    </div>
+</div>
+)
+}
+
 return(
 <div className="signin-page">
+<button onClick={() => setAdmin(true)} className="admin-btn"><i class="fas fa-user-lock"></i></button>
 
+{admin ? renderAdmin() : <> </>}
     <h1 style={{marginBottom: '30px'}} className="ch-logoname">
         <Link style={{textDecoration: 'none', color: 'brown'}} to="/">Baked.By.Art</Link>
     </h1>
