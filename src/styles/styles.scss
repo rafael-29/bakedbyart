@@ -26,34 +26,8 @@ $dark-ap: #311716;
 // HEADER
 @import "./header.scss";
 
-// LOADING SCREEN
-.loadingscreen{
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-@include align();
-background-color: white;
-
-}
-.invi{
-visibility: hidden;
-}
-.img-loadbx{
-    border-radius: 50%;
-    overflow: hidden;
-    height: 140px;
-    width: 140px;
-.img-load{
-    height: 100%;
-    width: 100%;
-}
-}
-.load-cont{
-@include align();
-flex-direction: column;
-}
+// loading screen before receipt
+@import "./loadingscreen.scss";
 
 // BANNER PAGE
 .mobobanner-page{
@@ -109,8 +83,134 @@ position: relative;
 z-index: 22;
 }
 
+// breads info
+.bread-info-page{
+padding: 100px 80px;
+}
+.info-name{
+font-size: 2rem;
+font-family: $monste;
+color: $dark-ap;
+}
+.infobx{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-wrap: wrap;
 
+}
 
+.info-imgbx{
+height: 500px;
+width:500px;
+margin-right: 20px;
+margin-bottom: 15px;
+.info-img{
+height: 100%;
+width: 100%
+}
+}
+
+.info-content{
+width: 400px;
+}
+.infopic-and-cnt{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+border: 1px solid brown;
+padding: 5px;
+margin-bottom: 15px;
+}
+.infopicbx{
+height: 110px;
+width: 110px;
+.infopic{
+height: 100%;
+width: 100%
+}
+}
+.info-cnt{
+text-align: right;
+
+}
+.infonam{
+font-size: 1.4rem;
+font-family: $menucap;
+
+}
+.info-costnqnty{
+font-weight: 600;
+color: brown;
+margin-top: 20px;
+font-size: 1.2rem;
+}
+
+.info-qnty{
+font-size: 1.5rem;
+letter-spacing: 1px;
+color: brown;
+font-weight: 600;
+margin-bottom: 5px;
+}
+.info-btnz{
+margin-bottom: 10px;
+}
+.info-btn{
+padding: 4px 10px;
+font-family: $monste;
+border: none;
+color: white;
+background: skyblue;
+margin-right: 10px;
+border-radius: 3px;
+outline: none;
+cursor: pointer;
+font-size: 1.1rem;
+}
+.minus{
+background: rgb(255, 46, 46);
+}
+
+.info-addtocartbtn{
+padding: 8px 10px;
+font-family: $monste;
+border: none;
+color: white;
+background: skyblue;
+margin-right: 10px;
+border-radius: 3px;
+outline: none;
+cursor: pointer;
+font-size: 1.4rem;
+width: 362px;
+letter-spacing: 1px;
+}
+.info-addtocartbtn:hover{
+opacity: .8;
+}
+
+.info-btn:hover{
+opacity: .8;
+}
+
+@media(max-width: 700px){
+.bread-info-page{
+padding:80px 20px;
+}
+
+.info-imgbx{
+height: 400px;
+width:400px;
+margin-right: 0;
+margin-bottom: 25px;
+.info-img{
+height: 100%;
+width: 100%
+}
+}
+
+}
 @import './bananamenu.scss';
 
 @import './register.scss';

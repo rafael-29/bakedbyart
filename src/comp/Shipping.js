@@ -12,7 +12,9 @@ const Shipping = () => {
 if(localStorage.getItem('carts') === null){
 window.location.replace('/')
 }
-
+const addThisTocart = JSON.parse(localStorage.getItem('carts'))
+const addTotal = JSON.parse(localStorage.getItem('checkout'))
+const  localemail = JSON.parse(localStorage.getItem('localEm'))
 
 
 const [selectedDate, setSelectedDate] = useState(new Date())
@@ -33,9 +35,7 @@ const [isComplete, setIsComplete] = useState(false)
 
 // FUNCTIONSS
 const savetoData = () => {
-    const addThisTocart = JSON.parse(localStorage.getItem('carts'))
-    const addTotal = JSON.parse(localStorage.getItem('checkout'))
-    const  localemail = JSON.parse(localStorage.getItem('localEm'))
+    renderLoadingScreen();
     const address = JSON.parse(localStorage.getItem('address'))
 
     const toPost = {
@@ -49,9 +49,11 @@ const savetoData = () => {
 
     axios.post('https://bakedbyartapi.herokuapp.com/orders/add', toPost)
     .then( () => {
-    const lastinfo = {orderno: toPost.orderno}
-    localStorage.setItem('lastinfo', JSON.stringify(lastinfo))
-    log('react axios saved to data')
+    const lastinfo = {orderno: toPost.orderno};
+    localStorage.setItem('lastinfo', JSON.stringify(lastinfo));
+    setTimeout( ()  => {
+    window.location.replace('/receipt')
+    }, 1500)
     })
     .catch(err => log(err))
 }
@@ -96,10 +98,6 @@ date: selectedDate,
 }
 localStorage.setItem('address', JSON.stringify(toPut))
 savetoData();
-renderLoadingScreen()
-setTimeout( ()  => {
-window.location.replace('/receipt')
-}, 1500)
 }
 
 const checkComplete = () => {
