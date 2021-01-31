@@ -2604,13 +2604,16 @@ footer {
   .bundle-order {
     margin: 0 auto;
     height: auto;
-    -webkit-box-shadow: 2px 3px 13px rgba(0, 0, 0, 0.3);
-            box-shadow: 2px 3px 13px rgba(0, 0, 0, 0.3);
-    width: 380px;
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    width: 310px;
+  }
+  .banana-breads {
+    padding: 12px;
   }
   .another-imgbx {
-    width: 360px;
-    height: 260px;
+    width: 280px;
+    height: 240px;
   }
   .another-imgbx .another-img {
     height: 100%;
