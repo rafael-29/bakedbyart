@@ -32,27 +32,29 @@ localStorage.setItem('localEm', JSON.stringify(emailLoc))
 // START
 return(
 <div className="checkout-cont">
-<h1 className="ch-logoname">Baked.By.Art</h1>
-
+<h1 style={{marginBottom: '30px'}} className="ch-logoname">
+            <Link style={{textDecoration: 'none', color: 'brown'}} to="/">Baked.By.Art</Link>
+    </h1>
 
 <div className="register-guest">
     <div className="guest">
         <div className="ch-head">GUEST CHECKOUT</div>
         <div className="ch-cnt">You will be able to register your account at the end of checkout.</div>
+        
         <form className="ch-formz" onSubmit={addEmailToLocal}>
-        <input type="email" className="ch-email" placeholder="Enter Email Address" 
-        value={guest} onChange={e => setGuest(e.target.value)} required />
+            <input type="email" className="ch-email" placeholder="Enter Email Address" 
+            value={guest} onChange={e => setGuest(e.target.value)} required />
 
-        <button onMouseMove={insertLocalEm} className="ch-btn">
-        GUEST CHECKOUT
-        </button>
+            <button onMouseMove={insertLocalEm} className="ch-btn ch-unibtn">
+            GUEST CHECKOUT
+            </button>
 
         </form>
     </div>
   
 
     <form className="ch-form">
-        <p className="form-headcd">REGISTERED CUSTOMERS</p>
+        <p className="ch-head">REGISTERED CUSTOMERS</p>
             <input type="email" className="ch-email" placeholder="Enter Email Address" 
             value={login} onChange={e => setLogin(e.target.value)} required />
             <input type="password" className="ch-email" placeholder="Enter Password" 

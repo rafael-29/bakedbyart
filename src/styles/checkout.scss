@@ -12,24 +12,35 @@
     }
     .register-guest{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 20px 40px;
     }
     
     .guest{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 500px;
+    margin-right: 20px;
+    margin-bottom: 50px;
     }
     .ch-form{
     display: flex;
     flex-direction: column;  
-    width: 50%;
+    width: 500px;
+    }
+    
+    .ch-formz{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
     }
     .ch-head{
     font-family: $monste;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     opacity: .7;
     }
     
@@ -43,6 +54,7 @@
     font-family: $noto;
     font-weight: 600;
     color: $dark;
+    margin-bottom: 10px;
     }
     .ch-email{
     font-size: 1.1rem;
@@ -57,6 +69,9 @@
     color:black;
     font-family: $monste;
     opacity: .4;
+    }
+    .ch-unibtn{
+    width: 200px;
     }
     .ch-btn{
     padding: 6px 10px;
@@ -85,8 +100,32 @@
     color: $dark;
     background: $verylight;
     }
-    .ch-btnz:active{
-        color: $dark;
-        background: $verylight;
-        }
+.ch-btnz:active{
+    color: $dark;
+    background: $verylight;
+    }
     
+
+@media(max-width: 900px){
+.checkout-cont{
+padding: 40px 50px;
+}
+}
+
+@media(max-width: 700px){
+.checkout-cont{
+padding: 40px 10px;
+}
+
+.register-guest{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-wrap: wrap;
+padding: 0;
+}
+
+.guest{
+margin-right: 0;
+}
+}

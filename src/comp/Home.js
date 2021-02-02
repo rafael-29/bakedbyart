@@ -155,7 +155,7 @@ const bananaMenu = () => (
                 <div className="bndl-inst">you can choose your topings after the check out</div>
                 <div className="btn-cont">
                 <button onClick={() => addBundleOrder(bundle)} onMouseDown={showNow} className="bndl-btn">ADD TO CART</button>
-                <button onClick={() => log(bundle)} onMouseDown={showNow} className="bndlshow-btn">SHOW ALL MENU</button>
+                <button onClick={openAllMenu} className="bndlshow-btn">SHOW ALL MENU</button>
                 </div>
             </div>
         </div>
@@ -180,27 +180,27 @@ cookiesBread.map(bread => (
     </div>
 
     <div className="bread-cnt">
-    <div className="bread-name">{bread.name}</div>
-    <div className="bread-subname">{bread.subname}</div>
+        <div className="bread-name">{bread.name}</div>
+        <div className="bread-subname">{bread.subname}</div>
 
-    <div className="price">₱{bread.cost*bread.qnty}</div>
-        <div className="qnty-bx">
-          
-                <div className="qnty-cap">Quantity:</div>
-
-                <div className="qnty-cont">
-                    <div className="qntys">{bread.qnty}</div>
-
-                    <div className="qnty-btns">
-                        <button onClick={() => addqntycookie(bread)} className="qnty-btn"><i className="fas fa-plus"></i></button>
-                        <button onClick={() => deductCookie(bread)} className="qnty-btn"><i className="fas fa-minus"></i></button>
-                    </div>
-                </div>
+        <div className="price">₱{bread.cost*bread.qnty}</div>
+            <div className="qnty-bx">
             
-        </div>
-    
-    <button onClick={() => addBundleOrder(bread)} className="addtocart">ADD TO CART</button>
-    <button className="openmenu">OPEN ALL MENU</button>
+                    <div className="qnty-cap">Quantity:</div>
+
+                    <div className="qnty-cont">
+                        <div className="qntys">{bread.qnty}</div>
+
+                        <div className="qnty-btns">
+                            <button onClick={() => addqntycookie(bread)} className="qnty-btn"><i className="fas fa-plus"></i></button>
+                            <button onClick={() => deductCookie(bread)} className="qnty-btn"><i className="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                
+            </div>
+        
+        <button onClick={() => addBundleOrder(bread)} className="addtocart">ADD TO CART</button>
+        <button onClick={openAllMenu} className="openmenu">OPEN ALL MENU</button>
     </div>
 
 </div>
@@ -213,7 +213,10 @@ cookiesBread.map(bread => (
 )
 ///////////////////// FUNCTIONS
 
-
+// opening all menu
+const openAllMenu = () => {
+window.location.replace('/collection')
+}
 
 //// START OF RETURNING HTML
 return(

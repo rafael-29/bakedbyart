@@ -299,4 +299,35 @@
         outline: none;
         cursor: pointer;
     }
+
+@media(max-width:740px){
+
+.cookie-breads{
+padding: 20px 10px;
+}
+
+.bread-cont{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-self: start;
+}
+
+.bread-subname{
+margin-bottom: 20px;
+}
+
+.bread-imgbx{
+height: 300px;
+width: 260px;
+overflow: hidden;
+border-radius: 8px;
+margin-right: 0;
+.img-bread{
+height: 100%;
+width: 100%;
+}
+}
+
+}
     

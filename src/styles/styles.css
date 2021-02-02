@@ -495,16 +495,17 @@ header .class-length {
 }
 
 .info-btn {
-  padding: 4px 10px;
+  padding: 8px 10px;
   font-family: "Montserrat", sans-serif;
   border: none;
   color: white;
   background: skyblue;
-  margin-right: 10px;
   border-radius: 3px;
   outline: none;
   cursor: pointer;
   font-size: 1.1rem;
+  width: 400px;
+  margin-bottom: 5px;
 }
 
 .minus {
@@ -522,7 +523,7 @@ header .class-length {
   outline: none;
   cursor: pointer;
   font-size: 1.4rem;
-  width: 362px;
+  width: 400px;
   letter-spacing: 1px;
 }
 
@@ -1723,6 +1724,40 @@ footer {
   cursor: pointer;
 }
 
+@media (max-width: 740px) {
+  .cookie-breads {
+    padding: 20px 10px;
+  }
+  .bread-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: start;
+        align-self: start;
+  }
+  .bread-subname {
+    margin-bottom: 20px;
+  }
+  .bread-imgbx {
+    height: 300px;
+    width: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 0;
+  }
+  .bread-imgbx .img-bread {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .bundle-bx {
   margin: 100px auto;
   display: -webkit-box;
@@ -2074,12 +2109,14 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 20px 40px;
 }
 
@@ -2091,7 +2128,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
+  width: 500px;
+  margin-right: 20px;
+  margin-bottom: 50px;
 }
 
 .ch-form {
@@ -2102,12 +2141,28 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 500px;
+}
+
+.ch-formz {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .ch-head {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   opacity: .7;
 }
 
@@ -2121,6 +2176,7 @@ footer {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 600;
   color: #884939;
+  margin-bottom: 10px;
 }
 
 .ch-email {
@@ -2155,6 +2211,10 @@ footer {
   color: black;
   font-family: "Montserrat", sans-serif;
   opacity: .4;
+}
+
+.ch-unibtn {
+  width: 200px;
 }
 
 .ch-btn {
@@ -2199,6 +2259,35 @@ footer {
 .ch-btnz:active {
   color: #884939;
   background: #fff3a7;
+}
+
+@media (max-width: 900px) {
+  .checkout-cont {
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .checkout-cont {
+    padding: 40px 10px;
+  }
+  .register-guest {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+  }
+  .guest {
+    margin-right: 0;
+  }
 }
 
 .shipping-page {

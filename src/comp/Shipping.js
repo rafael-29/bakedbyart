@@ -44,7 +44,7 @@ const savetoData = () => {
     useraddress:address,
     thecarts: addThisTocart,
     total: addTotal,
-    orderdate: Date()
+    orderdate: new Date()
     }
 
     axios.post('https://bakedbyartapi.herokuapp.com/orders/add', toPost)

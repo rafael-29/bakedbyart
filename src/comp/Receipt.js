@@ -60,7 +60,16 @@ return(
 
     <div className="order-info">
         <div className="order-n"><span className="order-sp">ORDER NO:</span> <span className="orderno">{find.orderno}</span></div>
-        <div className="order-n"><span className="order-sp">ORDER DATE</span> <div className="date">{find.orderdate}</div></div>
+        <div className="order-n"><span className="order-sp">ORDER DATE</span> <div className="date">{new Date().toLocaleDateString('en-US', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+})}</div></div>
+        <div className="order-n"><span className="order-sp">DELIVERY DATE</span> <div className="date">{new Date(find.useraddress.date).toLocaleDateString('en-US', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        })}</div></div>
     </div>
 
 </div>
