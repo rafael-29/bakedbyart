@@ -12,9 +12,12 @@ import Signin from './comp/Signin';
 import Register from './comp/Register';
 import Bananamenus from './comp/Bananamenus';
 import BananasInfo from './comp/BananasInfo';
-
+import Popup from './comp/Popup';
+import AdminPage from './comp/AdminPage';
 
 import "./styles/styles.css";
+
+
 
 const App = () => {
 
@@ -61,12 +64,14 @@ const [thebananaz, setThebananaz] = useState([
         },
 ])
    
+const [popup, setpopup] = useState(false)
 
+const [adminEntered, setAdminEntered] = useState(false)
 
 const renderHome = () => (
 <>
 <Header />
-<Home />
+<Home setpopup={setpopup}/>
 </>
 )
 
@@ -93,11 +98,23 @@ const renderBananaMenu = () => (
 )
 
 const renderBananasInfo = (props) => (
-<BananasInfo theprops={props} thebananaz={thebananaz} setThebananaz={setThebananaz} />
+<BananasInfo setpopup={setpopup} theprops={props} thebananaz={thebananaz} setThebananaz={setThebananaz} />
 )
+
+const renderAdminPage = () => (
+<AdminPage adminEntered={adminEntered}
+ setAdminEntered={setAdminEntered}/>
+)
+
+const renderSignin = () => (
+<Signin adminEntered={adminEntered} setAdminEntered={setAdminEntered}/>
+)
+
+
 
 return(
 <div>
+<Popup popup={popup} setpopup={setpopup} />
 
 <Router>
 
@@ -111,10 +128,11 @@ return(
 
 <Route path="/shipping" render={renderShip} /> 
 <Route path="/receipt" component={Receipt} />
-<Route path="/signin" exact component={Signin} />
+<Route path="/signin/" exact render={renderSignin} />
 <Route path="/signin/register" exact component={Register} />
 <Route path="/bananamenu" render={renderBananaMenu} />
 <Route path="/bananasinfo/:id" render={renderBananasInfo} />
+<Route path="/adminpage" render={renderAdminPage} />
 
 
 </Router>

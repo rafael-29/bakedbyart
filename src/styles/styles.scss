@@ -31,239 +31,12 @@ $dark-ap: #311716;
 // ADMIN SIGN
 @import "./admin.scss";
 
-// UNI HOME
+@import "./homestyle.scss";
 
-.test-home{
-position: relative;
-left: 0;
-top: -10px;
-width: 100%;
-height: 600px;
-z-index: 2;
-.test-img{
-height: 100%;
-width: 100%;
-filter: brightness(0.6);
-}
-}
-
-.madebyhand-bx{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 55;
-}
-.madebyhand{
-font-size: 3rem;
-color: #b1e0da;
-font-family: $vibes;
-letter-spacing: 2px;
-position: relative;
-z-index: 4;
-}
-.the-logobx{
-height: 140px;
-width: 140px;
-border-radius: 50%;
-overflow: hidden;
-position: relative;
-z-index: 4;
-.the-logoimg{
-height: 100%;
-width: 100%;
-}
-}
-// BANNER PAGE
-.mobobanner-page{
-position: relative;
-height: 100vh;
-z-index: 1;
-display: none;
-.mobo-bannimg{
-height: 100%;
-width: 100%;
-}
-}
-
-.mobo-banner-cntbx{
-position: absolute;
-bottom: 30%;
-text-align: center;
-left: 0;
-width: 100%;
-z-index: 22;
-}
-.mobo-banner-p{
-font-family: $vibes;
-color: brown;
-font-size: 1.2rem;
-font-weight: 600;
-background:white;
-width: 400px;
-padding: 6px 0;
-margin: 0 auto;
-
-}
-.mobo-banner-btn{
-background:#703423;
-border: none;
-color:#fff3a7 ;
-outline: none;
-font-size: 1.1rem;
-padding: 4px 10px;
-font-weight: 600;
-font-family: $monste;
-cursor: pointer;
-position: relative;
-z-index: 22;
-}
-.mobo-banner-btnbx{
-margin-top: 20px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-cursor: pointer;
-position: relative;
-z-index: 22;
-}
-
-// breads info
-.bread-info-page{
-padding: 100px 80px;
-}
-.info-name{
-font-size: 2rem;
-font-family: $monste;
-color: $dark-ap;
-}
-.infobx{
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-flex-wrap: wrap;
-
-}
-
-.info-imgbx{
-height: 500px;
-width:500px;
-margin-right: 20px;
-margin-bottom: 15px;
-.info-img{
-height: 100%;
-width: 100%
-}
-}
-
-.info-content{
-width: 400px;
-}
-.infopic-and-cnt{
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-border: 1px solid brown;
-padding: 5px;
-margin-bottom: 15px;
-}
-.infopicbx{
-height: 110px;
-width: 110px;
-.infopic{
-height: 100%;
-width: 100%
-}
-}
-.info-cnt{
-text-align: right;
-
-}
-.infonam{
-font-size: 1.4rem;
-font-family: $menucap;
-
-}
-.info-costnqnty{
-font-weight: 600;
-color: brown;
-margin-top: 20px;
-font-size: 1.2rem;
-}
-
-.info-qnty{
-font-size: 1.5rem;
-letter-spacing: 1px;
-color: brown;
-font-weight: 600;
-margin-bottom: 5px;
-}
-.info-btnz{
-margin-bottom: 10px;
-}
-.info-btn{
-padding: 8px 10px;
-font-family: $monste;
-border: none;
-color: white;
-background: skyblue;
-
-border-radius: 3px;
-outline: none;
-cursor: pointer;
-font-size: 1.1rem;
-width: 400px;
-margin-bottom: 5px;
-}
-.minus{
-background: rgb(255, 46, 46);
-}
-
-.info-addtocartbtn{
-padding: 8px 10px;
-font-family: $monste;
-border: none;
-color: white;
-background: skyblue;
-margin-right: 10px;
-border-radius: 3px;
-outline: none;
-cursor: pointer;
-font-size: 1.4rem;
-width: 400px;
-letter-spacing: 1px;
-}
-.info-addtocartbtn:hover{
-opacity: .8;
-}
-
-.info-btn:hover{
-opacity: .8;
-}
-
-@media(max-width: 700px){
-
-.bread-info-page{
-padding:80px 20px;
-}
-
-.info-imgbx{
-height: 400px;
-width:400px;
-margin-right: 0;
-margin-bottom: 25px;
-.info-img{
-height: 100%;
-width: 100%
-}
-}
-
-}
+//MOBO BANNER
+@import "./mobobanner.scss";
+// BREADS INFO STYLE
+@import "./breadsInfo.scss";
 @import './bananamenu.scss';
 @import './register.scss';
 @import "./signin.scss";
@@ -297,3 +70,94 @@ width: 100%
 
 // ALL MEDIA QUERIES
 @import "./mediaq.scss";
+
+@import "./mobilemenu.scss";
+
+@import "./popupmsg.scss";
+
+// admin style
+.admin-page{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+}
+.dashboard{
+width: 300px;
+
+height: 900px;
+font-family: $monste;
+background-color: #574b90;
+color: white;
+}
+.dash-header{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+padding: 10px;
+color: #303a52;
+border-bottom: 6px solid #fc85ae;
+}
+.admin-name{
+font-family: $monste;
+font-size: 1.3rem;
+font-weight: 600;
+opacity: .8;
+}
+.dash-imgbx{
+height: 40px;
+width: 40px;
+border-radius: 50%;
+overflow: hidden;
+margin-right: 5px;
+.dash-img{
+height: 100%;
+width: 100%;
+}
+}
+.dash-field{
+width: 100%;
+}
+.dashsvg{
+width: 30px;
+margin-right: 10px
+}
+.dash-cnt-ttlebx{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 15px;
+background-color: #303a52 ;
+}
+.dash-cnt-title{
+font-size: 1.2rem;
+
+}
+.dash-cntbx{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+cursor: pointer;
+}
+.dash-cntbx:hover{
+opacity: .8;
+background-color: #9e579d;
+}
+.dashpicked{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+background-color: #9e579d;
+cursor: pointer;
+}
+.dash-png-lbel{
+@include align();
+}
+.fa-clock, .fa-check-circle{
+font-size: 20px;
+color: white;
+margin-right: 10px;
+
+}

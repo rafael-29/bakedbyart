@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
 const Signin = () => {
+
+useEffect( () => {
+
+if(localStorage.getItem('adminauth')){
+return window.location.replace('/adminpage')
+}
+        
+}, [])
+
+
+window.document.querySelector('body').style.overflow = 'visible'
 
 
 const [signemail, setSignEmail] = useState()
@@ -13,13 +25,37 @@ const [admin, setAdmin] = useState(false)
 const [adminUser, setAdminUser] = useState()
 const [adminPass, setAdminPass] = useState()
 
+const [wrong, setWrong] = useState()
+
+
+
+
+
 //FUNCITONS
 const register = () => {
 window.location.replace('/signin/register')
 }
 
+
+// AUTHENTICATION
 const adminAuth = () => {
 
+if(!adminUser && !adminPass) return setWrong('error blank')
+
+const authThis = {
+admin: adminUser,
+password: adminPass
+}
+axios.post('https://bakedbyartapi.herokuapp.com/admin/login', authThis)
+.then( result => {
+const data = result.data;
+if(data === false) return setWrong('wrong username !')
+if(data === 'Wrong password') return setWrong('wrong password')
+localStorage.setItem('adminauth', adminPass)
+window.document.getElementById('linktoadmin').click()
+})
+
+.catch(error => console.log(error))
 }
 
 // CLOSING ADMIN SIGN IN PAGE
@@ -27,6 +63,7 @@ const closeAdmin = () => {
 setAdmin(false)
 window.document.querySelector('body').style.overflow = "visible"
 }
+
 
 const renderAdmin = () => {
 
@@ -38,7 +75,7 @@ return(
             <img src="/images/april.png" alt="baked.by.art"
             className="adminimg" />
         </div>
-
+        <p style={{color: 'red', marginBottom: '10px'}}>{wrong}</p>
         <div className="admin-input-dev">
             <input placeholder="username" type="text" value={adminUser}
             onChange={e => setAdminUser(e.target.value)}
@@ -55,7 +92,7 @@ return(
         <button className="admin-subcan" onClick={adminAuth}>SUBMIT</button>
         <button className="admin-subcan can" onClick={closeAdmin}>CANCEL</button>
         </div>
-
+        <Link id="linktoadmin" style={{opacity: '0', pointerEvents: 'none'}} to="/adminpage">go</Link>
     </div>
 </div>
 )
@@ -63,7 +100,7 @@ return(
 
 return(
 <div className="signin-page">
-<button onClick={() => setAdmin(true)} className="admin-btn"><i class="fas fa-user-lock"></i></button>
+<button onClick={() => setAdmin(true)} className="admin-btn"><i className="fas fa-user-lock"></i></button>
 
 {admin ? renderAdmin() : <> </>}
     <h1 style={{marginBottom: '30px'}} className="ch-logoname">

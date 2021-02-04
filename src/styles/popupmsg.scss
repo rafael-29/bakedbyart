@@ -1,0 +1,66 @@
+.popup-message{
+    height: auto;
+    @include align();
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 99;
+    transition: .5s;
+    }
+    
+    .pop-alert{
+    padding: 2px 10px;
+    background: $verylight;
+    color: $dark;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: $monste;
+    border-radius: 6px;
+    }
+    
+    .pop-cont{
+    background-color:$verylight;
+    @include align();
+    padding: 10px 20px;
+    flex-direction: column;
+    border-radius: 6px;
+    
+    }
+    .popup-p:nth-child(1){
+    font-size: 1rem;
+    text-align: center;
+    }
+    .popup-cnt{
+    margin-bottom: 10px;
+    font-family: $monste;
+    }
+    .popup-p{
+    font-size: 1.4rem;
+    }
+    .pop-btn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: crimson;
+    color: white;
+    padding: 3px 15px;
+    font-family: $monste;
+    font-size: 1.1rem;
+    border-radius: 7px;
+    }
+    .pop-btn:active{
+    opacity: .8;
+    background-color: white;
+    color: black;
+    }
+    .continue-btn{
+    background-color: skyblue;
+    margin-right: 10px;
+    }
+    .popup-btnz{
+    display: flex;
+    justify-content: space-around;
+    }

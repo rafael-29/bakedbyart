@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Bundle from './Bundle';
-import Collection from './Collection'
 import Mobobanner from './Mobobanner';
 
 const banana = 'banana-breads';
@@ -11,9 +10,18 @@ const full = "16pcs full bundle";
 const half = "8pcs half bundle";
 
 
-const Home = () => {
+const Home = (props) => {
 
 
+useEffect( () => {
+
+if(localStorage.getItem('adminauth')){
+return window.location.replace('/adminpage')
+}
+        
+}, [])
+
+const {setpopup} = props
 
 // for rendering pages
 const [page, setPage] = useState(banana)
@@ -57,8 +65,6 @@ setBundle({...bundle, chosen: e.target.value})
 
 
 const addBundleOrder = (e) => {
-
-
 let items;
 if(localStorage.getItem('carts') === null){
 items = []
@@ -66,19 +72,18 @@ items = []
 items = JSON.parse(localStorage.getItem('carts'))
 }
 const bundle = {
-    uni: Math.random(items.length),
-    name: e.name,
-    subname: e.subname,
-    chosen: e.chosen,
-    cost: e.qnty ? e.cost*e.qnty : e.cost,
-    image: e.image,
-    qnty: e.qnty
-    }
+uni: Math.random(items.length),
+name: e.name,
+subname: e.subname,
+chosen: e.chosen,
+cost: e.qnty ? e.cost*e.qnty : e.cost,
+image: e.image,
+qnty: e.qnty
+}
 items.push(bundle)
 localStorage.setItem('carts', JSON.stringify(items))
 
-alert('One Item Is Added To The Cart')
-window.location.reload();
+setpopup(true)
 }
 
 // add qnty cookie
@@ -185,14 +190,12 @@ cookiesBread.map(bread => (
 
         <div className="price">₱{bread.cost*bread.qnty}</div>
             <div className="qnty-bx">
-            
-                    <div className="qnty-cap">Quantity:</div>
 
                     <div className="qnty-cont">
-                        <div className="qntys">{bread.qnty}</div>
+                        <div className="qntys"><span className="qnty-cap">Quantity</span> {bread.qnty}</div>
 
                         <div className="qnty-btns">
-                            <button onClick={() => addqntycookie(bread)} className="qnty-btn"><i className="fas fa-plus"></i></button>
+                            <button onClick={() => addqntycookie(bread)} className="qty-add-btn">add quantity</button>
                             <button onClick={() => deductCookie(bread)} className="qnty-btn"><i className="fas fa-minus"></i></button>
                         </div>
                     </div>
@@ -221,7 +224,7 @@ window.location.replace('/collection')
 //// START OF RETURNING HTML
 return(
 <div>
-{}
+
 <div className="test-home">
     <img src="/images/testwalltwo.jpg" 
     alt='baked.by.art' className="test-img" />

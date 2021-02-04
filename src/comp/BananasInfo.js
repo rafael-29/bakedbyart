@@ -5,8 +5,9 @@ import {Link} from 'react-router-dom'
 
 const BananasInfo = (props) => {
 
-const {thebananaz, setThebananaz} = props
+const {thebananaz, setThebananaz, setpopup} = props
 const id = props.theprops.match.params.id;
+
 
 
 const addQty = (e) => {
@@ -24,9 +25,17 @@ items = []
 }else{
 items = JSON.parse(localStorage.getItem('carts'))
 }
-
-items.push(e)
+const thebreaditem = {
+uni: Math.random(items.length),
+name: e.name,
+subname: e.subname,
+cost: e.cost*e.qnty,
+image: e.image,
+qnty: e.qnty
+}
+items.push(thebreaditem)
 localStorage.setItem('carts', JSON.stringify(items))
+setpopup(true)
 }
 
 const renderInfo = () => {

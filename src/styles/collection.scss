@@ -1,6 +1,7 @@
 ///// Collections Page
 .collec-page{
-    padding: 100px 100px;
+    padding: 10px 100px 100px 100px;
+    margin-bottom: 100px;
     }
     .all-prod{
     text-align: center;
@@ -10,17 +11,16 @@
     }
     .collections{
     @include align();
-    flex-wrap: wrap;
-    margin: 50px auto;
+    margin: 15px auto;
     }
     .banana-coll, .cookie-coll{
-    margin: 25px 40px;
+    margin: 25px auto;
     box-shadow: 1px 2px 5px rgba(0,0,0,.3);
     cursor: pointer;
     }
     .coll-imgbx{
-    height: 450px;
-    width: 410px;
+    height: 410px;
+    width: 400px;
     overflow: hidden;
     transition: .2s;
     .coll-img{
@@ -43,5 +43,23 @@
     background: $verylight;
     
     }
+    @media(max-width: 900px){
+    .collec-page{
+    padding: 50px;
+    }
+    .coll-imgbx{
+    width: 300px;
+    height: 310px;
+    }
+    .collections{
+    flex-wrap: wrap;
+    }
+    .all-prod{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    }
+    }
+
+
     
     

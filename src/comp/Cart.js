@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Link } from 'react-router-dom';
 
@@ -6,6 +6,13 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
+useEffect( () => {
+
+if(localStorage.getItem('adminauth')){
+return window.location.replace('/adminpage')
+}
+        
+}, [])
 
 const [code, setCode] = useState()
 
@@ -67,8 +74,7 @@ JSON.parse(localStorage.getItem('carts')).map(crt => (
         <div className="qnty">Quantity: {!crt.qnty ? `${crt.chosen}` : `${crt.qnty}${crt.qnty === 1 ? 'pc of bread' : 'pcs of bread'}`}</div>
 
         <div className="crt-btns">
-        <button onClick={() => remove(crt)} className="crt-btn rem">remove <i className="fas fa-trash-alt"></i></button>
-        <button className="crt-btn">show details</button>
+        <button onClick={() => remove(crt)} className="crt-btn"><i className="fas fa-trash-alt"></i></button>
         </div>
     </div>
 </div>

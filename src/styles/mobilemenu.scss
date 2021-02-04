@@ -1,0 +1,138 @@
+// the mobile menu box
+
+.mobosize-menubx{
+    height: 30px;
+    width: 50px;
+    margin-top: -2px;
+    @include align;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.mobomenu-line{
+height: 2px;
+width: 26px;
+background-color: brown;
+border-radius: 5px;
+position: relative;
+transition: .5s;
+}
+
+.mobomenu-line::before{
+content: '';
+position: absolute;
+height: 2px;
+width: 26px;
+background-color: brown;
+border-radius: 5px;
+transform: translateY(-7px);
+transition: .5s;
+}
+    
+.mobomenu-line::after{
+content: '';
+position: absolute;
+height: 2px;
+width: 20px;
+background-color: brown;
+border-radius: 5px;
+transform: translateY(7px);
+transition: .5s;
+}
+
+// RESPONSIVE
+
+.mobo-open-menubx{
+height: 30px;
+width: 50px;
+margin-top: -5px;
+@include align;
+cursor: pointer;
+position: relative;
+transition: .5s;
+z-index: 90;
+}
+
+.mobo-open-menubx .mobomenu-line{
+height: 2px;
+width: 26px;
+background-color:$dark-ap;
+border-radius: 5px;
+position: relative;
+transform: translateX(-50px);
+background: transparent;
+transition: .5s;
+}
+
+.mobo-open-menubx .mobomenu-line::before{
+content: '';
+position: absolute;
+height: 2px;
+width: 26px;
+background-color: $dark-ap;
+border-radius: 5px;
+transform: translate(50px, 0) rotate(-45deg);
+transition: .5s;
+}
+.mobo-open-menubx .mobomenu-line::after{
+content: '';
+position: absolute;
+height: 2px;
+width: 26px;
+background-color: $dark-ap;
+border-radius: 5px;
+transform: translate(50px, 0) rotate(45deg);
+transition: .5s;
+}
+
+.mobo-slidemenu{
+display: none;
+}
+
+@media(max-width: 800px){
+.mobosize-menubx{
+display: flex;
+z-index: 90;
+}
+.mobo-slidemenu{
+    position: fixed;
+    @include align();
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 88;
+    background-color: whitesmoke;
+    transition: .5s;
+    opacity: 0;
+}
+.mobo-slidemenu-open{
+position: fixed;
+@include align();
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+transform: scaleY(1);
+z-index: 88;
+background-color: whitesmoke;
+transition: .5s;
+transform-origin: top;
+opacity: 1;
+}
+.mobo-header-ul{
+list-style: none;
+}
+.mobo-header-li{
+margin-bottom: 10px;
+}
+.mobo-link-cart{
+text-decoration: none;
+font-family: $monste;
+color: $dark-ap;
+font-size: 1.6rem;
+}
+}
