@@ -19,16 +19,15 @@ window.location.replace('/signin')
 
 
 
-
+////// RETRIEVING DATA FROM MONGO DATA BASE
 const retrieveOrders = () => {
-    axios.get('https://bakedbyartapi.herokuapp.com/orders')
-    .then( rslts => {
-    const data = rslts.data;
-    setAllOrders(data)
-    })
-    .catch(err => console.log(err))
+axios.get('https://bakedbyartapi.herokuapp.com/orders')
+.then( rslts => {
+const data = rslts.data;
+setAllOrders(data)
+})
+.catch(err => console.log(err))
 }
-
 const retrieveFinishOrder = () => {
     axios.get('https://bakedbyartapi.herokuapp.com/finish')
     .then( rslts => {
@@ -37,13 +36,21 @@ const retrieveFinishOrder = () => {
     })
     .catch(err => console.log(err))
 }
+/////////////////////////////////////////// .........................
 
-const deleteOrder = (del) => {
-axios.delete(`https://bakedbyartapi.herokuapp.com/orders/${del._id}`)
+const deleteOrder = (todel) => {
+axios.delete(`https://bakedbyartapi.herokuapp.com/orders/${todel.orderno}`)
 .then( () => retrieveOrders())
 .catch(err => console.log(err))
 
 }
+const deleteFinishOrder = (del) => {
+axios.delete(`https://bakedbyartapi.herokuapp.com/finish/${del.orderno}`)
+.then( () => retrieveFinishOrder())
+.catch(err => console.log(err))
+}
+
+
 
 // SAVE TO FINISHED ORDER
 const saveToFinish = (ord) => {
@@ -70,18 +77,14 @@ return allOrders.map(order => (
     }) }</div>
     <div className="order">{order.total.totalwship}</div>
     <div className="order order-btnz">
-        <button onClick={() => saveToFinish(order)} className="ol-btn ol-btn-check"><i className="far fa-check-circle"></i></button>
+        <button onClick={() => saveToFinish(order)} className="ol-btn ol-btn-check"><i className="far fa-check-circle da-check"></i></button>
         <button onClick={() => deleteOrder(order)} className="ol-btn"><i className="far fa-times-circle"></i></button> 
     </div>
 </div>
 ))
 }
 
-const deleteFinishOrder = (del) => {
-axios.delete(`https://bakedbyartapi.herokuapp.com/finish/${del.orderno}`)
-.then( () => retrieveFinishOrder())
-.catch(err => console.log(err))
-}
+
 
 const renderFinishOrders = () => {
     return finishOrder.map(order => (

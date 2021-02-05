@@ -3556,12 +3556,12 @@ footer {
   padding: 10px 0 10px 10px;
 }
 
-.fa-check-circle {
+.da-check {
   color: green;
   font-size: 1.5rem;
 }
 
-.fa-check-circle:active {
+.da-check:active {
   color: white;
 }
 
