@@ -92,7 +92,7 @@ JSON.parse(localStorage.getItem('carts')).map(crt => (
 const renderEmpty = () => (
 <div>
 <h1 className="empty-h1">No Breads In The Cart</h1>
-<Link className="link-empt" to ="/">Go To Menu</Link> <i className="fas fa-arrow-left"></i>
+<Link className="link-empt" to ="/collection">Go To Menu</Link> <i className="fas fa-arrow-left"></i>
 </div>
 )
 

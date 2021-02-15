@@ -71,7 +71,7 @@ const [thecookie, setThecookie] = useState([
 id: 499,
 name: 'Ube',
 subname: 'Ube with cream cheese inside',
-cost: 100,
+cost: 20,
 qnty: 1,
 image: '/images/thecookieone.jpg'
 },
@@ -79,15 +79,15 @@ image: '/images/thecookieone.jpg'
 id: 501,
 name: 'Cookie macadamia',
 subname: 'chocolate classic',
-cost: 150,
-qnty: 1,
+cost: 15,
+qnty: 14,
 image: '/images/thecookieeight.jpg'
 },
 {
 id: 502,
 name: 'Cookie overload',
 subname: 'cookie with a vanilla',
-cost: 120,
+cost: 12,
 qnty: 1,
 image: '/images/thecookieseven.jpg'
 },
@@ -95,7 +95,7 @@ image: '/images/thecookieseven.jpg'
 id: 503,
 name: 'white macadamia',
 subname: 'cookie with a vanilla',
-cost: 120,
+cost: 22,
 qnty: 1,
 image: '/images/chocomacadamia.jpg'
 },

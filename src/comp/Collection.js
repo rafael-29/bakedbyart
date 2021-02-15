@@ -30,7 +30,7 @@ return(
         <img src="images/collectionthree.jpg" alt="baked.by.art"
         className="coll-img" />   
         </div>
-        <div className="coll-cnt">Cookies</div>
+        <div className="coll-cnt">Cookies and More</div>
     </Link>
     </div>
 

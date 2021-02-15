@@ -29,7 +29,7 @@ const thebreaditem = {
 uni: Math.random(items.length),
 name: e.name,
 subname: e.subname,
-cost: e.cost,
+cost: e.cost*e.qnty,
 image: e.image,
 qnty: e.qnty
 }

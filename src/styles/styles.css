@@ -2201,6 +2201,8 @@ footer {
 .coll-imgbx .coll-img {
   height: 100%;
   width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .coll-imgbx:hover .coll-img {
@@ -3673,5 +3675,11 @@ footer {
   width: 100%;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+@media (max-width: 740px) {
+  .cookis-about-page {
+    padding: 0 10px 100px 10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
