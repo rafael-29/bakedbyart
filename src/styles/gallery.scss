@@ -2,24 +2,46 @@
 
 .bundle-bx{
     margin: 100px auto;
-    @include align();
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     }
     
     .left-bndl{
-    height: 620px;
+    height: 580px;
     width: 490px;
     margin-right: 20px;
+    margin-bottom: 15px;
     .left-img{
     height: 100%;
     width: 100%;
     }
+    }
+
+    .left-bndl-two{
+    height: 325px;
+    width: 490px;
+    margin-right: 20px;
+    .left-img-two{
+    height: 100%;
+    width: 100%;
+    }
+    }
+    .left-bndl-two-cnt{
+    text-align: center;
+    padding: 10px;
+    font-family: $menucap;
+    color: #821506;
+    
+    font-size: 1.5rem;
+    width: 490px;
     }
     .right-bndl{
     height: auto;
     width: 640px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    
     }
     
     
@@ -27,8 +49,10 @@
     .top-cnt{
     text-align: center;
     padding: 5px 0;
-    background: brown;
-    color: white;
+    font-family: $menucap;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #821506;
     }
     
     .top-bx{
@@ -44,7 +68,6 @@
     .top-side{
         height: calc(100% -20px);
         width: 100%;
-        background: brown;
         .top-img{
         height: 100%;
         width: 100%;

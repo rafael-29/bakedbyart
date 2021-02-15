@@ -16,6 +16,8 @@ import Popup from './comp/Popup';
 import AdminPage from './comp/AdminPage';
 
 import "./styles/styles.css";
+import CookieMenu from './comp/CookieMenu';
+import CookieInfo from './comp/CookieInfo'
 
 
 
@@ -62,6 +64,41 @@ const [thebananaz, setThebananaz] = useState([
         qnty: 1,
         image: '/images/bmenufive.jpg'
         },
+])
+
+const [thecookie, setThecookie] = useState([
+{
+id: 499,
+name: 'Ube',
+subname: 'Ube with cream cheese inside',
+cost: 100,
+qnty: 1,
+image: '/images/thecookieone.jpg'
+},
+{
+id: 501,
+name: 'Cookie macadamia',
+subname: 'chocolate classic',
+cost: 150,
+qnty: 1,
+image: '/images/thecookieeight.jpg'
+},
+{
+id: 502,
+name: 'Cookie overload',
+subname: 'cookie with a vanilla',
+cost: 120,
+qnty: 1,
+image: '/images/thecookieseven.jpg'
+},
+{
+id: 503,
+name: 'white macadamia',
+subname: 'cookie with a vanilla',
+cost: 120,
+qnty: 1,
+image: '/images/chocomacadamia.jpg'
+},
 ])
    
 const [popup, setpopup] = useState(false)
@@ -110,7 +147,13 @@ const renderSignin = () => (
 <Signin adminEntered={adminEntered} setAdminEntered={setAdminEntered}/>
 )
 
+const renderCookieMenu = () => (
+<CookieMenu thecookie={thecookie} setThecookie={setThecookie} />
+)
 
+const renderCookiesInfo = (props) => (
+<CookieInfo setpopup={setpopup} theprops={props} thecookie={thecookie} setThecookie={setThecookie} />      
+)
 
 return(
 <div>
@@ -132,8 +175,9 @@ return(
 <Route path="/signin/register" exact component={Register} />
 <Route path="/bananamenu" render={renderBananaMenu} />
 <Route path="/bananasinfo/:id" render={renderBananasInfo} />
+<Route path="/cookiesinfo/:id" render={renderCookiesInfo} />
 <Route path="/adminpage" render={renderAdminPage} />
-
+<Route path="/cookiemenu" render={renderCookieMenu} />
 
 </Router>
 

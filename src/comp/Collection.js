@@ -25,13 +25,13 @@ return(
     </div>
 
     <div className="cookie-coll">
-    
+    <Link style={{textDecoration: 'none'}} to="/cookiemenu">
         <div className="coll-imgbx">
         <img src="images/collectionthree.jpg" alt="baked.by.art"
         className="coll-img" />   
         </div>
         <div className="coll-cnt">Cookies</div>
-    
+    </Link>
     </div>
 
 </div>

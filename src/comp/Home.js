@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Bundle from './Bundle';
 import Mobobanner from './Mobobanner';
+import AboutCookies from './AboutCookies';
 
 const banana = 'banana-breads';
 const cookies = 'cookies';
@@ -114,8 +115,6 @@ setCookies(cookiesBread.map(cook => cook.name ===e.name ? {...cook, qnty: cook.q
 }
 
 }
-
-
 
 const showNow = () => {
 setBundle({...bundle, cost: bundle.chosen === full ? 1000 : 600})
@@ -257,6 +256,9 @@ onClick={() => setPage(cookies)}>Cookies</button>
 
 <p className="gallery">Gallery</p>
 <Bundle />
+
+<p className="cookie-ttle-page">Introducing Our Cookies</p>
+<AboutCookies />
 
 </div>
 )}

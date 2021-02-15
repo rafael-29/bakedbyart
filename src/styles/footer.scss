@@ -5,12 +5,14 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $blue-ap;
+    background: #f5f5f5;
     
     }
     .footer-logobx{
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
+    overflow: hidden;
+    border-radius: 50%;
     .footer-logoimg{
     height: 100%;
     width: 100%

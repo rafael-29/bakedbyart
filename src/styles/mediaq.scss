@@ -114,7 +114,16 @@ font-size: 2.7rem;
                         margin-left: 84px;
                         font-size: 1.6rem;
                     }
-                    
+        // BUNDLE
+.left-bndl{
+    display: none;
+    }
+    .left-bndl-two{
+    display: none;
+    }
+    .left-bndl-two-cnt{
+    display: none;
+    }       
         }
         
 @media(max-width: 700px){
@@ -217,8 +226,6 @@ display: flex;
 }
 
 
-// BUNDLE
-.left-bndl{
-display: none;
-}
+
+    
 }

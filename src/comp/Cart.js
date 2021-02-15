@@ -23,7 +23,6 @@ const resu = totalsum > 1000 ? 0 : 100;
 
 
 
-
 const remove = (torem) => {
 // axios.delete(`http://localhost:5000/cart/${torem._id}`)
 // .then( () => inserToCartData())
