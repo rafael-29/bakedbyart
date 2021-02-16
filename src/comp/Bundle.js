@@ -18,7 +18,7 @@ return(
 
             <div className="top-bx">
                 <div className="top-side">
-                <img src="/images/gallerythree.jpg" alt="abdjasbd" className="top-img" />
+                <img src="/images/gallerythree.jpg" alt="baked.by.art" className="top-img" />
                 </div>
                 <div className="top-cnt">Baked to perfection and made with love every time</div>
             </div>

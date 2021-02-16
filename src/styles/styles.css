@@ -1964,6 +1964,7 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 1/1/2/3;
+  height: auto;
 }
 
 .left-bx {
