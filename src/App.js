@@ -69,7 +69,7 @@ const [thebananaz, setThebananaz] = useState([
 const [thecookie, setThecookie] = useState([
 {
 id: 499,
-name: 'Ube',
+name: 'Ube Pandesal',
 subname: 'Ube with cream cheese inside',
 cost: 20,
 qnty: 1,
@@ -77,10 +77,10 @@ image: '/images/thecookieone.jpg'
 },
 {
 id: 501,
-name: 'Cookie macadamia',
-subname: 'chocolate classic',
+name: 'Classic Choco Chips',
+subname: 'loaded of chocolates inside',
 cost: 15,
-qnty: 14,
+qnty: 1,
 image: '/images/thecookieeight.jpg'
 },
 {

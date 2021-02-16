@@ -2,25 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Bundle from './Bundle';
 import Mobobanner from './Mobobanner';
 import AboutCookies from './AboutCookies';
+import { Link } from 'react-router-dom';
 
 const banana = 'banana-breads';
 const cookies = 'cookies';
-const log = console.log;
 
-const full = "16pcs full bundle";
-const half = "8pcs half bundle";
+const full = "16pcs of cookies";
+const half = "8pcs of cookies";
 
 
 const Home = (props) => {
 
 
-useEffect( () => {
 
-if(localStorage.getItem('adminauth')){
-return window.location.replace('/adminpage')
-}
-        
-}, [])
 
 const {setpopup} = props
 
@@ -31,32 +25,40 @@ const [page, setPage] = useState(banana)
 const [cookiesBread, setCookies] = useState([
     {
         id: 201,
-        name: 'Classic Cookies',
-        cost: 24,
-        qnty: 6,
-        image: 'images/classic.jpg',
-        subname: 'classic cookies loaded with choco'
+        name: 'Vegan Banana Loaf',
+        cost: 140,
+        qnty: 1,
+        image: 'images/galleryone.jpg',
+        subname: 'loaded with chocolate chunks'
         },
         {
         id: 202,
-        name: 'Choco Macadamia',
-        cost: 41,
-        qnty: 6,
-        image: 'images/chocomacadamia.jpg',
-        subname: 'this cookie is mixed with white chocolate chips'
+        name: 'Banana Loaf',
+        cost: 220,
+        qnty: 1,
+        image: 'images/creamcheese.jpg',
+        subname: 'banana loaf with cream cheese inside'
         }
         
 ])
 const [bundle, setBundle] = useState({
     id: 333,
-    name: 'Banana Breads',
+    name: 'Classic Choco Chips',
     chosen: full,
     cost: 0,
-    image: 'images/collectiontwo.jpg',
-    subname: 'assorted flavors of Banana Breads'
+    image: 'images/classic.jpg',
+    subname: 'this cookie is loaded with chocolates'
 })
 const [bundleqty] = useState([full, half])
 
+
+useEffect( () => {
+
+    if(localStorage.getItem('adminauth')){
+    return window.location.replace('/adminpage')
+    }
+  //  setSample(bundle.chosen === full ? 1000 : 600)
+    }, [])
 //////// FUNCTIONS
 
 const changeCost = (e) => {
@@ -91,28 +93,44 @@ setpopup(true)
 const addqntycookie = (e) => {
 //setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: cook.qnty +1 } : cook))
 
+// setCookies(cookiesBread.map(cook => {
+// if(cook.name === e.name){
+
+// const fixed = {...cook, qnty: cook.qnty + 1}
+// return fixed;
+
+// }else{
+// return cook;
+// }
+// }))
+
 setCookies(cookiesBread.map(cook => {
-if(cook.name === e.name){
+if(cook.name === e.name) return {...cook, qnty: cook.qnty + 1}
+if(cook.name !== e.name) return cook;
 
-const fixed = {...cook, qnty: cook.qnty + 1}
-return fixed;
-
-}else{
-return cook;
-}
 }))
 
 }
 
 // deduct qnty cookie
 const deductCookie = (e) => {
-const matched = cookiesBread.find(cook => cook.name === e.name)
 
-if(matched.qnty === 6){
-setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: 6} : cook))
+const matched = cookiesBread.find(cookie => cookie.name === e.name)
+
+// if(matched.qnty === 6){
+// setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: 6} : cook))
+// }else{
+// setCookies(cookiesBread.map(cook => cook.name ===e.name ? {...cook, qnty: cook.qnty -1 } : cook))
+// }
+
+
+if(matched.qnty === 1){
+setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: 1} : cook))
 }else{
-setCookies(cookiesBread.map(cook => cook.name ===e.name ? {...cook, qnty: cook.qnty -1 } : cook))
+setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: cook.qnty - 1} : cook ))
 }
+
+
 
 }
 
@@ -129,6 +147,7 @@ const bananaMenu = () => (
     <div className="bundle-order">
 
         <div className="bndl-imgbx">
+        
             <img src={bundle.image} alt="baked.by.art"
             className="bndl-img" />
         </div>
@@ -140,7 +159,7 @@ const bananaMenu = () => (
             </div>
 
             <div className="another-imgbx">
-                <img src="/images/collectionone.jpg"
+                <img src="/images/trycookie.jpg"
                 className="another-img"alt="baked.by.art" />
             </div>
 
@@ -155,8 +174,10 @@ const bananaMenu = () => (
                 ))
                 }
                 </select>
+                {/* <h3>sample: {sample}</h3> */}
                 </div>
-                <div className="bndl-inst">you can choose your topings after the check out</div>
+                <div className="bndl-inst">you can choose more cookies in our 
+                <Link style={{color: 'brown', opacity: '.8'}} to="/cookiemenu"> MENU</Link></div>
                 <div className="btn-cont">
                 <button onClick={() => addBundleOrder(bundle)} onMouseDown={showNow} className="bndl-btn">ADD TO CART</button>
                 <button onClick={openAllMenu} className="bndlshow-btn">SHOW ALL MENU</button>
@@ -235,6 +256,8 @@ return(
         </div>
 
         <p className="madebyhand">made by hand, from scratch, with love</p>
+
+        <Link to="/collection" className="test-home-btn">SHOW MENU</Link>
     </div>
 </div>
 
@@ -243,11 +266,11 @@ return(
 <ul style={{marginTop: '60px'}} className="bread-choice">
 <li>
 <button className={page === banana ? 'active' : 'not-active'}
-onClick={() => setPage(banana)}>Banana Breads</button>
+onClick={() => setPage(banana)}>Classic Cookies</button>
 </li>
 <li>
 <button className={page === cookies ? 'active' : 'not-active'}
-onClick={() => setPage(cookies)}>Cookies</button>
+onClick={() => setPage(cookies)}>Banana breads</button>
 </li>
 </ul>
 

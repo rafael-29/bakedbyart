@@ -302,6 +302,35 @@ header .class-length {
           filter: brightness(0.6);
 }
 
+.test-home-btn {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #b1e0da;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 5px 14px;
+  border: 1px solid #b1e0da;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.test-home-btn:hover {
+  background: white;
+  opacity: .4;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: blue;
+}
+
+.test-home-btn:active {
+  background: white;
+  opacity: .4;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: blue;
+}
+
 .madebyhand-bx {
   position: absolute;
   top: 50%;

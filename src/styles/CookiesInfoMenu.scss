@@ -1,0 +1,38 @@
+.cookie-ttle-page{
+    font-size: 2.4rem;
+    color: brown;
+    text-align: center;
+    margin-bottom: 50px;
+    }
+    .cookis-about-page{
+    padding:0 100px 140px 100px ;
+    }
+    .cookies-section-cont{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    }
+    .ckies-imgbx{
+    overflow: hidden;
+    transition: .5s;
+    }
+    .ckies-imgbx:hover .ck-img {
+    transform: scale(1.1);
+    transition: .5s;
+    }
+    .ckies-imgbx{
+    overflow: hidden;
+    transition: .5s;
+    cursor: pointer;
+    }
+    .ck-img{
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+    }
+    
+    @media(max-width: 740px){
+    .cookis-about-page{
+    padding:0 10px 100px 10px ;
+    }
+    }
