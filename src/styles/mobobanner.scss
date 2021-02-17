@@ -60,10 +60,14 @@ margin-bottom: 20px;
     width: 140px;
     overflow: hidden;
     border-radius: 50%;
-    margin-left: 38%;
     margin-bottom: 21px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .bann-img{
     height: 100%;
     width: 100%;
+    position: relative;
     }
     }
