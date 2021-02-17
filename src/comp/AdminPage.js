@@ -96,9 +96,11 @@ window.document.getElementById('delete-order').click()
 .catch(err => console.log(err))
 }
 
+
+
 const renderAllOrders = () => {
 return allOrders.map(order => (
-<div className="order-bx" key={order.orderno} onClick={() => window.document.querySelector('.the-order-popup').style.display="block" }>
+<div className="order-bx" key={order.orderno} onClick={() => triggerPop(order) }>
     <div className="order">{order.orderno}</div>
     <div className="order ol-header-mob">{new Date(order.orderdate).toLocaleDateString('en-US',{
     day: '2-digit',
@@ -115,12 +117,15 @@ return allOrders.map(order => (
         <button onClick={() => saveToFinish(order)} className="ol-btn ol-btn-check"><i className="far fa-check-circle da-check"></i></button>
         <button id="delete-order" onClick={() => deleteOrder(order)} className="ol-btn"><i className="far fa-times-circle"></i></button> 
     </div>
-{showOrderBig(order)}
+{showOrderBig}
 </div>
 ))
 }
 
-
+const triggerPop = e => {
+    window.document.querySelector('.the-order-popup').style.display="block"
+    showOrderBig(e)
+    }
 
 const renderFinishOrders = () => {
     return finishOrder.map(order => (

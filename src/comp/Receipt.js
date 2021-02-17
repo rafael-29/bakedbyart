@@ -87,7 +87,6 @@ return(
         <div className="rcpt-cart" key={crt.uni}>
             <div className="namebx">
                 <div className="rcpt-namess">{crt.name}</div>
-                <div className="rcpt-names">{crt.subname}</div>
             </div>
 
             <div className="rcpt-namex align-rcpt">{crt.chosen ? crt.chosen : `${crt.qnty}pcs`  }</div>

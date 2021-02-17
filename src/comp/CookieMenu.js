@@ -31,7 +31,7 @@ thecookie.map(banana => (
         <p className="menu-name">
             {banana.subname}
         </p>
-        <p className="menu-cost">{`₱ ${banana.cost.toFixed(2)}`} </p>
+        <p className="menu-cost">{`₱ ${banana.fcost.toFixed(2)}`} </p>
 
         <Link className="link-menu" to="/bananainfo" />
 

@@ -40,7 +40,7 @@ const thebreaditem = {
 uni: Math.random(items.length),
 name: e.name,
 subname: e.subname,
-cost: e.cost,
+cost: e.qnty === 4 ? e.fcost : e.scost,
 image: e.image,
 qnty: e.qnty
 }
