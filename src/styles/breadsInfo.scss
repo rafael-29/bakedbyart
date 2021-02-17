@@ -27,7 +27,7 @@
     }
     
     .info-content{
-    width: 400px;
+    width: 500px;
     }
     .infopic-and-cnt{
     display: flex;
@@ -38,7 +38,7 @@
     margin-bottom: 15px;
     }
     .infopicbx{
-    height: 110px;
+    height: auto;
     width: 110px;
     .infopic{
     height: 100%;
@@ -47,12 +47,17 @@
     }
     .info-cnt{
     text-align: right;
-    
+    max-width: 300px;
     }
     .infonam{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: $menucap;
-    
+    }
+    .info-nam-ttle{
+    color: black;
+    opacity: .8;
+    font-family: $monste;
+    font-weight: 600;
     }
     .info-costnqnty{
     font-weight: 600;
@@ -68,8 +73,16 @@
     font-weight: 600;
     margin-bottom: 5px;
     }
+    .info-max-min{
+    font-size: 1.1rem;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0,0,0,.8);
+    margin-bottom: 7px;
+    color: rgba(0,0,0,.8);
+    }
     .info-btnz{
     margin-bottom: 5px;
+    width: 100%;
     }
     .info-btn{
     padding: 8px 10px;
@@ -77,12 +90,11 @@
     border: none;
     color: white;
     background: skyblue;
-    
     border-radius: 3px;
     outline: none;
     cursor: pointer;
     font-size: 1.1rem;
-    width: 400px;
+    width: 500px;
     margin-bottom: 5px;
     }
     .minus{
@@ -100,7 +112,7 @@
     outline: none;
     cursor: pointer;
     font-size: 1.4rem;
-    width: 400px;
+    width: 500px;
     letter-spacing: 1px;
     }
     .info-addtocartbtn:hover{

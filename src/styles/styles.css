@@ -400,22 +400,25 @@ header .class-length {
 
 .mobo-banner-p {
   font-family: "Great Vibes", cursive;
-  color: brown;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  background: white;
+  color: brown;
   width: 100%;
   padding: 6px 0;
   margin: 0 auto;
+  letter-spacing: 2px;
+  background-color: white;
+  margin-bottom: 20px;
 }
 
 .mobo-banner-btn {
-  background: #703423;
+  background: white;
   border: none;
-  color: #fff3a7;
+  border-radius: 25px;
+  color: brown;
   outline: none;
-  font-size: 1.1rem;
-  padding: 4px 10px;
+  font-size: 1.3rem;
+  padding: 4px 15px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
@@ -423,19 +426,29 @@ header .class-length {
   z-index: 22;
 }
 
-.mobo-banner-btnbx {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 22;
+.mobo-banner-btn:hover {
+  opacity: .9;
+  background: #fff3a7;
+  color: black;
+}
+
+.mobo-banner-btn:active {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mobo-banner-cntimgbx {
+  height: 140px;
+  width: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 38%;
+  margin-bottom: 21px;
+}
+
+.mobo-banner-cntimgbx .bann-img {
+  height: 100%;
+  width: 100%;
 }
 
 .bread-info-page {
@@ -475,7 +488,7 @@ header .class-length {
 }
 
 .info-content {
-  width: 400px;
+  width: 500px;
 }
 
 .infopic-and-cnt {
@@ -494,7 +507,7 @@ header .class-length {
 }
 
 .infopicbx {
-  height: 110px;
+  height: auto;
   width: 110px;
 }
 
@@ -505,11 +518,19 @@ header .class-length {
 
 .info-cnt {
   text-align: right;
+  max-width: 300px;
 }
 
 .infonam {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: "Redressed", cursive;
+}
+
+.info-nam-ttle {
+  color: black;
+  opacity: .8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 .info-costnqnty {
@@ -527,8 +548,17 @@ header .class-length {
   margin-bottom: 5px;
 }
 
+.info-max-min {
+  font-size: 1.1rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+  margin-bottom: 7px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .info-btnz {
   margin-bottom: 5px;
+  width: 100%;
 }
 
 .info-btn {
@@ -541,7 +571,7 @@ header .class-length {
   outline: none;
   cursor: pointer;
   font-size: 1.1rem;
-  width: 400px;
+  width: 500px;
   margin-bottom: 5px;
 }
 
@@ -560,7 +590,7 @@ header .class-length {
   outline: none;
   cursor: pointer;
   font-size: 1.4rem;
-  width: 400px;
+  width: 500px;
   letter-spacing: 1px;
 }
 
@@ -1938,7 +1968,7 @@ footer {
 .left-bndl {
   height: 470px;
   width: 400px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .left-bndl .left-img {
@@ -1947,7 +1977,7 @@ footer {
 }
 
 .left-bndl-two {
-  height: 350px;
+  height: 330px;
   width: 400px;
 }
 
@@ -1961,7 +1991,8 @@ footer {
   text-align: center;
   color: brown;
   font-family: "Redressed", cursive;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  background-color: whitesmoke;
 }
 
 .right-bndl {

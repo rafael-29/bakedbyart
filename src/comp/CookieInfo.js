@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 
-const BananasInfo = (props) => {
+const CookieInfo = (props) => {
 
 const {thecookie, setThecookie, setpopup} = props
 const id = props.theprops.match.params.id;
@@ -11,11 +11,22 @@ const id = props.theprops.match.params.id;
 
 
 const addQty = (e) => {
-setThecookie(thecookie.map(banana => banana.id === e.id ? {...banana, qnty: banana.qnty + 1} : banana))
+const thebread = thecookie.find(c => c.id === e.id)
+
+if(thebread.qnty === 6){
+return setThecookie(thecookie.map(cook => cook.id === e.id ? {...cook, qnty: 6} : cook))
+}else{
+setThecookie(thecookie.map(banana => banana.id === e.id ? {...banana, qnty: banana.qnty + 2} : banana))
+}
 }
 
 const deductQnty = (e) => {
-setThecookie(thecookie.map(banana => banana.id === e.id ? {...banana, qnty: banana.qnty - 1} : banana))
+
+const thebread = thecookie.find(c => c.id === e.id)
+
+if(thebread.qnty === 4) return setThecookie(thecookie.map(cook => cook.id === e.id ? {...cook, qnty: 4} : cook))
+
+setThecookie(thecookie.map(banana => banana.id === e.id ? {...banana, qnty: banana.qnty - 2} : banana))
 }
 
 const addThisToLocal = (e) => {
@@ -29,7 +40,7 @@ const thebreaditem = {
 uni: Math.random(items.length),
 name: e.name,
 subname: e.subname,
-cost: e.cost*e.qnty,
+cost: e.cost,
 image: e.image,
 qnty: e.qnty
 }
@@ -61,16 +72,17 @@ return(
                 <div className="info-cnt">
                     <p className="infonam">{details.name}</p>
                     <p className="infonam">{details.subname}</p>
-                    <p className="info-costnqnty">Total Amount: {`$${details.cost*details.qnty}`}</p>
+                    <p className="info-costnqnty">Total Amount: {details.qnty === 4 ? ` ₱${details.fcost}`: ` ₱${details.scost}`}</p>
                 </div>
             </div>
-            <p className="info-qnty">Quantity: {details.qnty > 1 ? `${details.qnty} pieces` : `${details.qnty} piece`}</p>
+            <p className="info-qnty">Quantity: {`Box of ${details.qnty}(60g per cookie)`}</p>
+            <p className="info-max-min">maximum of 6 Box. minimum of 4</p>
             <div className="info-btnz">
                         <button className="info-btn" onClick={() => addQty(details)}>ADD QUANTITY</button>
                         {details.qnty > 1 ? <button className="info-btn minus" onClick={() => deductQnty(details)}>DEDUCT QUANTITY</button> : <> </> }
              </div>
 
-             <button className="info-addtocartbtn" onClick={() => addThisToLocal(details)}>ADD TO CART <i class="fas fa-cart-plus"></i></button>
+             <button className="info-addtocartbtn" onClick={() => addThisToLocal(details)}>ADD TO CART <i className="fas fa-cart-plus"></i></button>
         </div>
     </div>
 </div>
@@ -94,4 +106,4 @@ return(
 )
 }
 
-export default BananasInfo
+export default CookieInfo

@@ -9,12 +9,19 @@ return(
 <img src="images/gallerytwo.jpg" alt="baked.by.art" 
 className="mobo-bannimg"/>
 
+
+
 <div className="mobo-banner-cntbx">
+
+<div className="mobo-banner-cntimgbx">
+    <img src="/images/april.png"
+    alt="baked.by.art" className="bann-img" />
+</div>
+
 <p className="mobo-banner-p">made by hand, from scratch with love</p>
-    <div className="mobo-banner-btnbx">
-        <button className="mobo-banner-btn" onClick={() => window.location.replace('/collection')}>Banana Breads Menu</button>     
-        <button className="mobo-banner-btn" onClick={() => window.location.replace('/collection')}>Cookies Menu</button>     
-    </div>
+
+<button className="mobo-banner-btn" onClick={() => window.location.replace('/collection')}>SHOW MENU</button>     
+
 </div>
 
 </div>

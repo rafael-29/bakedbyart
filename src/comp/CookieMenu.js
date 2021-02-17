@@ -25,7 +25,7 @@ thecookie.map(banana => (
         className="img-bananaimg" />    
     </div>
     <div className="menu-cnt">
-        <p className="menu-name">
+        <p className="menu-name info-nam-ttle">
             {banana.name}
         </p>
         <p className="menu-name">

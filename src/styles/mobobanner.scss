@@ -20,35 +20,50 @@
     }
     .mobo-banner-p{
     font-family: $vibes;
-    color: brown;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    background:white;
+    color:brown;
     width: 100%;
     padding: 6px 0;
     margin: 0 auto;
-    
+    letter-spacing: 2px;
+background-color: white;
+margin-bottom: 20px;
     }
     .mobo-banner-btn{
-    background:#703423;
+    background:white;
     border: none;
-    color:#fff3a7 ;
+    border-radius: 25px;
+    color:brown;
     outline: none;
-    font-size: 1.1rem;
-    padding: 4px 10px;
+    font-size: 1.3rem;
+    padding: 4px 15px;
     font-weight: 600;
     font-family: $monste;
     cursor: pointer;
     position: relative;
     z-index: 22;
     }
-    .mobo-banner-btnbx{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    z-index: 22;
+
+    .mobo-banner-btn:hover{
+    opacity: .9;
+    background: $verylight;
+    color: black;
     }
-    
+    .mobo-banner-btn:active{
+    filter: invert(1);
+    }
+
+  
+    .mobo-banner-cntimgbx{
+    height: 140px;
+    width: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 38%;
+    margin-bottom: 21px;
+    .bann-img{
+    height: 100%;
+    width: 100%;
+    }
+    }
