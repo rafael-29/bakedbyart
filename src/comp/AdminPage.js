@@ -50,36 +50,72 @@ axios.delete(`https://bakedbyartapi.herokuapp.com/finish/${del.orderno}`)
 .catch(err => console.log(err))
 }
 
+const closeX = () => {
+window.location.reload()
+}
+// SHOWING ORDERS IN BIG SCREEN
+const showOrderBig = (e) => (
+    <div className="the-order-popup">
+    <button className="pop-x" onClick={closeX}>X</button>
+    
+    <p className="pop-orderno">Orderno: <span className="pop-span"> {e.orderno}</span></p>
+    <br />
+    <h3>Person Details</h3>
+    <hr />
+    <p className="pop-orderno">Name: <span className="pop-span">{e.useraddress.name} {e.useraddress.lname}</span></p>
+    <p className="pop-orderno">Address: <span className="pop-span">{e.useraddress.address}</span></p>
+    <p className="pop-orderno">Village: <span className="pop-span">{e.useraddress.bldg}</span></p>
+    <p className="pop-orderno">City: <span className="pop-span">{e.useraddress.city}</span></p>
+    <p className="pop-orderno">Email: <span className="pop-span">{e.useremail}</span></p>
+    <p className="pop-orderno">Phone Number: <span className="pop-span">{e.useraddress.city}</span></p>
+    
+    <hr />
 
+    <h3>Person Order</h3>
+    {e.thecarts.map(cart => (
+    <div key={cart._id}>
+    <p className="pop-orderno">{cart.name}</p>
+    <p className="pop-orderno">{cart.subname}</p>
+    <p className="pop-orderno">{cart.cost}Pesos {cart.qnty}</p>
+    </div>
+    ))}
+
+    
+    </div>
+)
 
 // SAVE TO FINISHED ORDER
 const saveToFinish = (ord) => {
 axios.post('https://bakedbyartapi.herokuapp.com/finish/add', ord)
 .then( () => {
 retrieveFinishOrder()
+
+window.document.getElementById('delete-order').click()
+
 })
 .catch(err => console.log(err))
 }
 
 const renderAllOrders = () => {
 return allOrders.map(order => (
-<div className="order-bx" key={order.orderno}>
+<div className="order-bx" key={order.orderno} onClick={() => window.document.querySelector('.the-order-popup').style.display="block" }>
     <div className="order">{order.orderno}</div>
-    <div className="order">{new Date(order.orderdate).toLocaleDateString('en-US',{
+    <div className="order ol-header-mob">{new Date(order.orderdate).toLocaleDateString('en-US',{
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
     })}</div>
-    <div className="order">{new Date(order.useraddress.date).toLocaleDateString('en-US', {
+    <div className="order ol-header-mob">{new Date(order.useraddress.date).toLocaleDateString('en-US', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
     }) }</div>
-    <div className="order">{order.total.totalwship}</div>
+    <div className="order">₱{order.total.totalwship}</div>
     <div className="order order-btnz">
         <button onClick={() => saveToFinish(order)} className="ol-btn ol-btn-check"><i className="far fa-check-circle da-check"></i></button>
-        <button onClick={() => deleteOrder(order)} className="ol-btn"><i className="far fa-times-circle"></i></button> 
+        <button id="delete-order" onClick={() => deleteOrder(order)} className="ol-btn"><i className="far fa-times-circle"></i></button> 
     </div>
+{showOrderBig(order)}
 </div>
 ))
 }
@@ -90,17 +126,17 @@ const renderFinishOrders = () => {
     return finishOrder.map(order => (
     <div className="order-bx" key={order.orderno}>
         <div className="order">{order.orderno}</div>
-        <div className="order">{new Date(order.orderdate).toLocaleDateString('en-US',{
+        <div className="order ol-header-mob">{new Date(order.orderdate).toLocaleDateString('en-US',{
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
         })}</div>
-        <div className="order">{new Date(order.useraddress.date).toLocaleDateString('en-US', {
+        <div className="order ol-header-mob">{new Date(order.useraddress.date).toLocaleDateString('en-US', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
         }) }</div>
-        <div className="order">{order.total.totalwship}</div>
+        <div className="order">₱{order.total.totalwship}</div>
         <div className="order order-btnz">
             <button onClick={() => deleteFinishOrder(order)} className="ol-btn"><i className="far fa-times-circle"></i></button> 
         </div>
@@ -117,8 +153,8 @@ const renderRecent = () => (
     <div className="orderlist-container">
         <div className="orderlist-headerz">
             <div className="ol-header">order no.</div>
-            <div className="ol-header">order date</div>
-            <div className="ol-header">delivery date</div>
+            <div className="ol-header ol-header-mob">order date</div>
+            <div className="ol-header ol-header-mob">delivery date</div>
             <div className="ol-header">total</div>
             <div className="ol-header">actions</div>
         </div>
@@ -138,8 +174,8 @@ const renderFinish = () => (
     <div className="orderlist-container">
         <div className="orderlist-headerz">
             <div className="ol-header">order no.</div>
-            <div className="ol-header">order date</div>
-            <div className="ol-header">delivery date</div>
+            <div className="ol-header ol-header-mob">order date</div>
+            <div className="ol-header ol-header-mob">delivery date</div>
             <div className="ol-header">total</div>
             <div className="ol-header">actions</div>
         </div>
@@ -156,8 +192,14 @@ retrieveOrders()
 retrieveFinishOrder()
 }, [])
 
+
+
 const passw = localStorage.getItem('adminauth')
 if(!passw) return window.location.replace('/signin')
+
+
+
+
 /////// START OF JSX
 const renderAdminPage = () =>  (
     <div className="admin-page">

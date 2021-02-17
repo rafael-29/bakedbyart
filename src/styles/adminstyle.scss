@@ -3,6 +3,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     }
+
+   
     .dashboard{
     width: 300px;
     
@@ -177,3 +179,50 @@
     color: white;
     }
     
+    @media(max-width: 840px){
+    .admin-page{
+    display: flex;
+    flex-direction: column;
+    }
+    .dashboard{
+    width: 100%;
+    height: auto;
+    font-family: $monste;
+    background-color: #574b90;
+    color: white;
+    }
+    .dash-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 10px;
+    color: #303a52;
+    border-bottom: 6px solid #fc85ae;
+    }
+    .admin-name{
+    font-family: $monste;
+    font-size: 1.3rem;
+    font-weight: 600;
+    opacity: .8;
+    }
+    // recent page
+    .recent-page{
+    padding: 20px 5px;
+    margin-bottom: 500px;
+    }
+    .ol-header-mob{
+    display: none;
+    }
+    .orderlist-headerz{
+    @include space();
+    width: 100%;
+    background-color: #574b90;
+    color: white;
+    }
+    .order-bx{
+    @include space();
+    cursor: pointer;
+    width: 100%;
+    }
+}

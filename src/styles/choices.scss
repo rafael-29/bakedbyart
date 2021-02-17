@@ -28,16 +28,7 @@
     .banana-breads, .cookie-breads{
     padding: 20px 60px;
     }
-    .gallery{
-    font-size: 3.4rem;
-    font-family: $menucap;
-    color: brown;
-    margin: 0 auto;
-    width: 200px;
-    padding-bottom: 7px;
-    border-bottom: 3px solid brown;
-    text-align: center;
-    }
+    
 
     .banana-breads{
     margin-bottom: 200px;
@@ -60,7 +51,7 @@
     
     .bread-imgbx{
     height: 320px;
-    width: 260px;
+    width: 300px;
     overflow: hidden;
     border-radius: 8px;
     margin-right: 15px;
@@ -79,6 +70,7 @@
         align-self: start;
         text-align: left;
         padding: 15px 0;
+        width: 300px;
     }
     
     .bread-name{
@@ -214,14 +206,11 @@
     .bundle-order{
         margin: 0 auto;
         height: 600px;
-        box-shadow: 2px 3px 13px rgba(0,0,0,.3);
-        display: flex;
-        border-radius: 10px;
-        overflow: hidden;
-        max-width: 900px;
+    @include align();
+    
     }
     .another-imgbx{
-    width: 400px;
+    width: 100%;
     height: 260px;
     .another-img{
     height: 100%;
@@ -236,6 +225,7 @@
     align-items: flex-start;
     flex-direction: column;
     height: auto;
+    width: 400px;
     }
     .bndl-name{
     font-family: $menucap;
@@ -246,7 +236,7 @@
     color: brown;
     font-weight: 600;
     padding-bottom: 6px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-bottom: 1px solid brown;
     }
     .bndle-cost{
@@ -333,8 +323,8 @@ margin-bottom: 20px;
 }
 
 .bread-imgbx{
-height: 300px;
-width: 260px;
+height: 330px;
+width: 300px;
 overflow: hidden;
 border-radius: 8px;
 margin-right: 0;

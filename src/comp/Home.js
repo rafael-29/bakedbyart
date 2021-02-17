@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const banana = 'banana-breads';
 const cookies = 'cookies';
 
-const full = "16pcs of cookies";
-const half = "8pcs of cookies";
+const full = "Box of 6 (60g per cookie)";
+const half = "Box of 4 (60g per cookie)";
 
 
 const Home = (props) => {
@@ -47,7 +47,7 @@ const [bundle, setBundle] = useState({
     chosen: full,
     cost: 0,
     image: 'images/classic.jpg',
-    subname: 'this cookie is loaded with chocolates'
+    subname: 'Hand-mixed cookie dough, with semi-sweet chocolate chips & dark chocolate morsels'
 })
 const [bundleqty] = useState([full, half])
 
@@ -135,7 +135,7 @@ setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: cook.
 }
 
 const showNow = () => {
-setBundle({...bundle, cost: bundle.chosen === full ? 1000 : 600})
+setBundle({...bundle, cost: bundle.chosen === full ? 300 : 200})
 }
 
 
@@ -164,7 +164,7 @@ const bananaMenu = () => (
             </div>
 
             <div>
-                <div className="bndle-cost">Price: ₱{bundle.chosen === full ? 1000 : 600}</div>
+                <div className="bndle-cost">Price: ₱{bundle.chosen === full ? 300 : 200}</div>
                 <div>
                 <label className="bndl-label">Choose Quantity: </label>
                 <select value={bundle.chosen} onChange={changeCost} className="bndl-sel">
@@ -277,7 +277,7 @@ onClick={() => setPage(cookies)}>Banana breads</button>
 {page === banana ? bananaMenu() : cookiesMenu()}
 
 
-<p className="gallery">Gallery</p>
+<p className="gallery">Our finest breads</p>
 <Bundle />
 
 <p className="cookie-ttle-page">Introducing Our Cookies</p>
