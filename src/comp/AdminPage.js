@@ -9,7 +9,8 @@ const AdminPage = () => {
 const [page, setPage] = useState(recent)
 const [allOrders, setAllOrders] = useState()
 const [finishOrder, setAllFinishOrder] = useState()
-
+const [popDetails, setPopDetails] = useState()
+const [isDetailClick, setIsDetailClick] = useState(false)
 
 
 const signOut = () => {
@@ -50,39 +51,54 @@ axios.delete(`https://bakedbyartapi.herokuapp.com/finish/${del.orderno}`)
 .catch(err => console.log(err))
 }
 
-const closeX = () => {
-window.location.reload()
-}
+
 // SHOWING ORDERS IN BIG SCREEN
-const showOrderBig = (e) => (
+const showOrderBig = () => {
+    if(popDetails === undefined) return <> </>
+
+    return (
     <div className="the-order-popup">
-    <button className="pop-x" onClick={closeX}>X</button>
-    
-    <p className="pop-orderno">Orderno: <span className="pop-span"> {e.orderno}</span></p>
-    <br />
-    <h3>Person Details</h3>
-    <hr />
-    <p className="pop-orderno">Name: <span className="pop-span">{e.useraddress.name} {e.useraddress.lname}</span></p>
-    <p className="pop-orderno">Address: <span className="pop-span">{e.useraddress.address}</span></p>
-    <p className="pop-orderno">Village: <span className="pop-span">{e.useraddress.bldg}</span></p>
-    <p className="pop-orderno">City: <span className="pop-span">{e.useraddress.city}</span></p>
-    <p className="pop-orderno">Email: <span className="pop-span">{e.useremail}</span></p>
-    <p className="pop-orderno">Phone Number: <span className="pop-span">{e.useraddress.city}</span></p>
-    
-    <hr />
-
-    <h3>Person Order</h3>
-    {e.thecarts.map(cart => (
-    <div key={cart._id}>
-    <p className="pop-orderno">{cart.name}</p>
-    <p className="pop-orderno">{cart.subname}</p>
-    <p className="pop-orderno">{cart.cost}Pesos {cart.qnty}</p>
+        <button className="pop-x" onClick={() => setIsDetailClick(false)}>X</button>
+        <p className="pop-orderno">Orderno: <span className="pop-span"> {popDetails.orderno}</span></p>
+        <br />
+        <h3>Person Details</h3>
+        <hr />
+        <p className="pop-orderno">Name: <span className="pop-span">{popDetails.useraddress.name} {popDetails.useraddress.lname}</span></p>
+        <p className="pop-orderno">Address: <span className="pop-span">{popDetails.useraddress.address}</span></p>
+        <p className="pop-orderno">Village: <span className="pop-span">{popDetails.useraddress.bldg}</span></p>
+        <p className="pop-orderno">City: <span className="pop-span">{popDetails.useraddress.city}</span></p>
+        <p className="pop-orderno">Email: <span className="pop-span">{popDetails.useremail}</span></p>
+        <p className="pop-orderno">Phone Number: <span className="pop-span">{popDetails.useraddress.city}</span></p>
     </div>
-    ))}
+    )
+}
 
-    
-    </div>
-)
+
+
+    // <div className="the-order-popup">
+    // <button className="pop-x" onClick={closeX}>X</button>
+    // <p className="pop-orderno">Orderno: <span className="pop-span"> {e.orderno}</span></p>
+    // <br />
+    // <h3>Person Details</h3>
+    // <hr />
+    // <p className="pop-orderno">Name: <span className="pop-span">{e.useraddress.name} {e.useraddress.lname}</span></p>
+    // <p className="pop-orderno">Address: <span className="pop-span">{e.useraddress.address}</span></p>
+    // <p className="pop-orderno">Village: <span className="pop-span">{e.useraddress.bldg}</span></p>
+    // <p className="pop-orderno">City: <span className="pop-span">{e.useraddress.city}</span></p>
+    // <p className="pop-orderno">Email: <span className="pop-span">{e.useremail}</span></p>
+    // <p className="pop-orderno">Phone Number: <span className="pop-span">{e.useraddress.city}</span></p>
+    // <hr />
+    // <h3>Person Order</h3>
+    // {e.thecarts.map(cart => (
+    // <div key={cart._id}>
+    // <p className="pop-orderno">{cart.name}</p>
+    // <p className="pop-orderno">{cart.subname}</p>
+    // <p className="pop-orderno">{cart.cost}Pesos {cart.qnty}</p>
+    // </div>
+    // ))}
+    // </div>
+
+
 
 // SAVE TO FINISHED ORDER
 const saveToFinish = (ord) => {
@@ -96,36 +112,35 @@ window.document.getElementById('delete-order').click()
 .catch(err => console.log(err))
 }
 
+const triggerPop = e => {
+setPopDetails(e)
+}
 
 
 const renderAllOrders = () => {
 return allOrders.map(order => (
-<div className="order-bx" key={order.orderno} onClick={() => triggerPop(order) }>
-    <div className="order">{order.orderno}</div>
-    <div className="order ol-header-mob">{new Date(order.orderdate).toLocaleDateString('en-US',{
+<div className="order-bx" key={order.orderno}  onMouseOver={() => triggerPop(order)}>
+    <div className="order" onClick={() => setIsDetailClick(true)}>{order.orderno}</div>
+    <div className="order ol-header-mob" onClick={() => setIsDetailClick(true)}>{new Date(order.orderdate).toLocaleDateString('en-US',{
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
     })}</div>
-    <div className="order ol-header-mob">{new Date(order.useraddress.date).toLocaleDateString('en-US', {
+    <div className="order ol-header-mob" onClick={() => setIsDetailClick(true)}>{new Date(order.useraddress.date).toLocaleDateString('en-US', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
     }) }</div>
-    <div className="order">₱{order.total.totalwship}</div>
+    <div className="order" onClick={() => setIsDetailClick(true)}>₱{order.total.totalwship}</div>
     <div className="order order-btnz">
         <button onClick={() => saveToFinish(order)} className="ol-btn ol-btn-check"><i className="far fa-check-circle da-check"></i></button>
         <button id="delete-order" onClick={() => deleteOrder(order)} className="ol-btn"><i className="far fa-times-circle"></i></button> 
     </div>
-{showOrderBig}
 </div>
 ))
 }
 
-const triggerPop = e => {
-    window.document.querySelector('.the-order-popup').style.display="block"
-    showOrderBig(e)
-    }
+
 
 const renderFinishOrders = () => {
     return finishOrder.map(order => (
@@ -255,6 +270,7 @@ const renderAdminPage = () =>  (
 return(
 <>
 {renderAdminPage()}
+{isDetailClick ? showOrderBig() : <></>}
 </>
 )
 }
