@@ -75,6 +75,7 @@ cost: 0,
 fcost: 200,
 scost: 300,
 qnty: 4,
+chosen: '',
 image: '/images/thecookieone.jpg'
 },
 {
@@ -85,6 +86,7 @@ cost: 0,
 fcost: 200,
 scost: 300,
 qnty: 4,
+chosen: '',
 image: '/images/thecookieeight.jpg'
 },
 {
@@ -95,6 +97,7 @@ cost: 0,
 fcost: 200,
 scost: 300,
 qnty: 4,
+chosen: '',
 image: '/images/thecookieseven.jpg'
 },
 {
@@ -105,6 +108,7 @@ cost: 0,
 fcost: 200,
 scost: 300,
 qnty: 4,
+chosen: '',
 image: '/images/chocomacadamia.jpg'
 },
 ])

@@ -28,6 +28,10 @@ const [adminPass, setAdminPass] = useState()
 const [wrong, setWrong] = useState()
 
 
+// loading page when signed in
+const [auth, setAuth] = useState(false)
+
+
 
 
 
@@ -39,7 +43,7 @@ window.location.replace('/signin/register')
 
 // AUTHENTICATION
 const adminAuth = () => {
-
+setAuth(true)
 if(!adminUser && !adminPass) return setWrong('error blank')
 
 const authThis = {
@@ -51,7 +55,7 @@ axios.post('https://bakedbyartapi.herokuapp.com/admin/login', authThis)
 const data = result.data;
 if(data === false) return setWrong('wrong username !')
 if(data === 'Wrong password') return setWrong('wrong password')
-setAuth(true)
+
 localStorage.setItem('adminauth', adminPass)
 window.document.getElementById('linktoadmin').click()
 })
@@ -99,7 +103,6 @@ return(
 )
 }
 
-const [auth, setAuth] = useState(false)
 const authLoad = () => (
 <div className="auth-load">
     <h2 className="auth-load-h">Connecting please wait ...</h2>

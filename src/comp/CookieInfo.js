@@ -41,6 +41,7 @@ uni: Math.random(items.length),
 name: e.name,
 subname: e.subname,
 cost: e.qnty === 4 ? e.fcost : e.scost,
+chosen: e.qnty === 6 ? 'Box of 6 (60g per cookie)' : 'Box of 4 (60g per cookie)',
 image: e.image,
 qnty: e.qnty
 }

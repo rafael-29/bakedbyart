@@ -20,6 +20,11 @@ $verylight:#fff3a7;
 $blue-ap: #b1e0da;
 $dark-ap: #311716;
 
+$two: #574b90;
+$one: #303a52;
+$four: #fc85ae;
+$three: #9e579d;
+
 // mixins
 @import "./mixinss.scss";
 
@@ -91,9 +96,10 @@ width: 100%;
 z-index: 99;
 background: whitesmoke;
 color: black;
+padding: 60px 80px;
 }
 .pop-x{
-padding: 10px 15px;
+padding: 10px 18px;
 background: none;
 font-size: 1.5rem;
 font-family: $monste;
@@ -107,4 +113,66 @@ top: 25px;
 right: 30px;
 cursor: pointer;
 outline: none;
+}
+.det-person-cont{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid $one;
+}
+.det-ttle{
+font-size: 1.8rem;
+font-family: $monste;
+color: $one;
+padding-bottom: 5px;
+border-bottom: 1.5px solid $two;
+margin-bottom: 10px;
+}
+.pop-orderno{
+font-weight: 600;
+font-size: 1.2rem;
+font-family: $monste;
+color: $one;
+}
+.pop-span{
+font-family: 14px;
+color:$two;
+}
+.det-order-cont{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.det-ttle-order{
+font-family: $monste;
+font-size: 1.5rem;
+color: $one;
+}
+
+.det-theorders-cont{
+display: flex;
+}
+.det-orderbx{
+padding-right: 10px;
+margin-right: 15px;
+border-right: 1px solid $one;
+}
+.det-orders{
+font-family: $ptserif;
+}
+@media(max-width: 800px){
+.the-order-popup{
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 99;
+background: whitesmoke;
+color: black;
+padding: 60px 20px;
+}
 }

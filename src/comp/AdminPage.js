@@ -56,49 +56,44 @@ axios.delete(`https://bakedbyartapi.herokuapp.com/finish/${del.orderno}`)
 const showOrderBig = () => {
     if(popDetails === undefined) return <> </>
 
-    return (
-    <div className="the-order-popup">
-        <button className="pop-x" onClick={() => setIsDetailClick(false)}>X</button>
-        <p className="pop-orderno">Orderno: <span className="pop-span"> {popDetails.orderno}</span></p>
-        <br />
-        <h3>Person Details</h3>
-        <hr />
-        <p className="pop-orderno">Name: <span className="pop-span">{popDetails.useraddress.name} {popDetails.useraddress.lname}</span></p>
-        <p className="pop-orderno">Address: <span className="pop-span">{popDetails.useraddress.address}</span></p>
-        <p className="pop-orderno">Village: <span className="pop-span">{popDetails.useraddress.bldg}</span></p>
-        <p className="pop-orderno">City: <span className="pop-span">{popDetails.useraddress.city}</span></p>
-        <p className="pop-orderno">Email: <span className="pop-span">{popDetails.useremail}</span></p>
-        <p className="pop-orderno">Phone Number: <span className="pop-span">{popDetails.useraddress.city}</span></p>
+return (
+<div className="the-order-popup">
+    <button className="pop-x" onClick={() => setIsDetailClick(false)}>X</button>
+
+
+    <h3 className="det-ttle">Person Details</h3>
+    <div className="det-person-cont">
+        <div>
+            <p className="pop-orderno">NAME: <span className="pop-span">{popDetails.useraddress.name} {popDetails.useraddress.lname}</span></p>
+            <p className="pop-orderno">ADDRESS: <span className="pop-span">{popDetails.useraddress.address}</span></p>
+            <p className="pop-orderno">VILLAGE: <span className="pop-span">{popDetails.useraddress.bldg}</span></p>
+            <p className="pop-orderno">CITY: <span className="pop-span">{popDetails.useraddress.city}</span></p>
+        </div>
+        <div>
+            <p className="pop-orderno">EMAIL: <span className="pop-span">{popDetails.useremail}</span></p>
+            <p className="pop-orderno">PHONE: <span className="pop-span">{popDetails.useraddress.phone}</span></p>
+        </div>
     </div>
+
+    <div className="det-order-cont">
+        <h3 className="det-ttle-order">Order Details</h3>
+        <h3 className="det-ttle-order">No.{popDetails.orderno}</h3>
+    </div> 
+    <div className="det-theorders-cont">
+    {
+    popDetails.thecarts.map(bread => (
+    <div className="det-orderbx" key={bread.id}>
+        <p className="det-orders">{bread.name}</p>
+        <p className="det-orders">{bread.chosen ? `${bread.chosen}` : bread.qnty > 1 ?  `${bread.qnty}pcs` : `${bread.qnty}pc`}</p>
+        <p className="det-orders">Total Cost: {`₱${bread.cost}`} </p>
+    </div>
+    ))
+    }
+    </div>
+
+</div>
     )
 }
-
-
-
-    // <div className="the-order-popup">
-    // <button className="pop-x" onClick={closeX}>X</button>
-    // <p className="pop-orderno">Orderno: <span className="pop-span"> {e.orderno}</span></p>
-    // <br />
-    // <h3>Person Details</h3>
-    // <hr />
-    // <p className="pop-orderno">Name: <span className="pop-span">{e.useraddress.name} {e.useraddress.lname}</span></p>
-    // <p className="pop-orderno">Address: <span className="pop-span">{e.useraddress.address}</span></p>
-    // <p className="pop-orderno">Village: <span className="pop-span">{e.useraddress.bldg}</span></p>
-    // <p className="pop-orderno">City: <span className="pop-span">{e.useraddress.city}</span></p>
-    // <p className="pop-orderno">Email: <span className="pop-span">{e.useremail}</span></p>
-    // <p className="pop-orderno">Phone Number: <span className="pop-span">{e.useraddress.city}</span></p>
-    // <hr />
-    // <h3>Person Order</h3>
-    // {e.thecarts.map(cart => (
-    // <div key={cart._id}>
-    // <p className="pop-orderno">{cart.name}</p>
-    // <p className="pop-orderno">{cart.subname}</p>
-    // <p className="pop-orderno">{cart.cost}Pesos {cart.qnty}</p>
-    // </div>
-    // ))}
-    // </div>
-
-
 
 // SAVE TO FINISHED ORDER
 const saveToFinish = (ord) => {
@@ -139,8 +134,6 @@ return allOrders.map(order => (
 </div>
 ))
 }
-
-
 
 const renderFinishOrders = () => {
     return finishOrder.map(order => (
