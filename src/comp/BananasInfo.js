@@ -61,11 +61,11 @@ return(
                 </div>
                 <div className="info-cnt">
                     <p className="infonam">{details.name}</p>
-                    <p className="infonam">{details.subname}</p>
+                    
                     <p className="info-costnqnty">Total Amount: {`₱ ${details.cost*details.qnty}`}</p>
                 </div>
             </div>  
-            <p className="info-qnty">Quantity: {`Box of ${details.qnty}`}</p>
+            <p className="info-qnty">Quantity: { details.qnty >  1 ? `${details.qnty} pcs`: `${details.qnty} pc` }</p>
             <div className="info-btnz">
                         <button className="info-btn" onClick={() => addQty(details)}>ADD QUANTITY</button>
                         {details.qnty > 1 ? <button className="info-btn minus" onClick={() => deductQnty(details)}>DEDUCT QUANTITY</button> : <> </> }
