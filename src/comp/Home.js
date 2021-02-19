@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const banana = 'banana-breads';
 const cookies = 'cookies';
 
-const full = "Box of 6 (60g per cookie)";
-const half = "Box of 4 (60g per cookie)";
+const full = "Box of 20 (15g per cookie)";
+const half = "Box of 10 (30g per cookie)";
 
 
 const Home = (props) => {
@@ -43,10 +43,10 @@ const [cookiesBread, setCookies] = useState([
 ])
 const [bundle, setBundle] = useState({
     id: 333,
-    name: 'Classic Choco Chips',
+    name: 'Cookie Bites',
     chosen: full,
     cost: 0,
-    image: 'images/classic.jpg',
+    image: 'images/cookiebites.png',
     subname: 'Hand-mixed cookie dough, with semi-sweet chocolate chips & dark chocolate morsels'
 })
 const [bundleqty] = useState([full, half])
@@ -135,7 +135,7 @@ setCookies(cookiesBread.map(cook => cook.name === e.name ? {...cook, qnty: cook.
 }
 
 const showNow = () => {
-setBundle({...bundle, cost: bundle.chosen === full ? 300 : 200})
+setBundle({...bundle, cost: bundle.chosen === full ? 230 : 260})
 }
 
 
@@ -164,7 +164,7 @@ const bananaMenu = () => (
             </div>
 
             <div>
-                <div className="bndle-cost">Price: ₱{bundle.chosen === full ? 300 : 200}</div>
+                <div className="bndle-cost">Price: ₱{bundle.chosen === full ? 230 : 260}</div>
                 <div>
                 <label className="bndl-label">Choose Quantity: </label>
                 <select value={bundle.chosen} onChange={changeCost} className="bndl-sel">
