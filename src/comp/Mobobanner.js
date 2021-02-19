@@ -16,8 +16,6 @@ className="mobo-bannimg"/>
 </div>
 <div className="mobo-banner-cntbx">
 
-
-
 <p className="mobo-banner-p">made by hand, from scratch with love</p>
 
 <button className="mobo-banner-btn" onClick={() => window.location.replace('/collection')}>SHOW MENU</button>     
