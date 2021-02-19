@@ -31,8 +31,6 @@ const [rqMessage, setRqMessage] = useState();
 
 const [isLoad, setIsLoad] = useState(false)
 
-const [isComplete, setIsComplete] = useState(false)
-
 // FUNCTIONSS
 const savetoData = () => {
     renderLoadingScreen();
@@ -100,15 +98,6 @@ localStorage.setItem('address', JSON.stringify(toPut))
 savetoData();
 }
 
-const checkComplete = () => {
-if(rqMessage === undefined || rqMessage.length === 0){
-setIsComplete(false)
-alert('fill the missing blanks or put NONE')
-}else{
-setIsComplete(true)
-}
-}
-
 return(
 <div className="shipping-page" style={{position: 'relative'}}>
 
@@ -167,7 +156,7 @@ return(
                 </div>
 
                 <div className="ship-btnbx">
-                    <button onMouseMove={checkComplete} onClick={addtoData} className="ship-btn">
+                    <button onClick={addtoData} className="ship-btn">
                     CONTINUE CHECKOUT
                     </button>
                 </div>

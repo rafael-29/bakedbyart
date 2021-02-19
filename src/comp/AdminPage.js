@@ -54,12 +54,11 @@ axios.delete(`https://bakedbyartapi.herokuapp.com/finish/${del.orderno}`)
 
 // SHOWING ORDERS IN BIG SCREEN
 const showOrderBig = () => {
-    if(popDetails === undefined) return <> </>
+if(popDetails === undefined) return <> </>
 
 return (
 <div className="the-order-popup">
-    <button className="pop-x" onClick={() => setIsDetailClick(false)}>X</button>
-
+    <button className="pop-x" onClick={() => setIsDetailClick(false)}><i id="xforadmin" class="fas fa-times-circle"></i></button>
 
     <h3 className="det-ttle">Person Details</h3>
     <div className="det-person-cont">
@@ -79,6 +78,7 @@ return (
         <h3 className="det-ttle-order">Order Details</h3>
         <h3 className="det-ttle-order">No.{popDetails.orderno}</h3>
     </div> 
+
     <div className="det-theorders-cont">
     {
     popDetails.thecarts.map(bread => (

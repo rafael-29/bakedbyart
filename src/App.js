@@ -127,6 +127,7 @@ const renderHome = () => (
 <>
 <Header />
 <Home setpopup={setpopup}/>
+<Footer />
 </>
 )
 
@@ -134,6 +135,7 @@ const renderCart = () => (
 <>
 <Header />
 <Cart />
+<Footer />
 </>
 )
 
@@ -141,19 +143,25 @@ const renderCollection = () => (
 <>
 <Header />
 <Collection />
+<Footer />
 </>
 )
 
 const renderShip = () => (
+<>
 <Shipping />
+<Footer />
+</>
 )
 
 const renderBananaMenu = () => (
 <Bananamenus thebananaz={thebananaz} setThebananaz={setThebananaz}/>
+
 )
 
 const renderBananasInfo = (props) => (
 <BananasInfo setpopup={setpopup} theprops={props} thebananaz={thebananaz} setThebananaz={setThebananaz} />
+
 )
 
 const renderAdminPage = () => (
@@ -162,11 +170,17 @@ const renderAdminPage = () => (
 )
 
 const renderSignin = () => (
-<Signin adminEntered={adminEntered} setAdminEntered={setAdminEntered}/>
+<>
+<Signin adminEntered={adminEntered} setAdminEntered={setAdminEntered} />
+<Footer />
+</>
 )
 
 const renderCookieMenu = () => (
+<> 
 <CookieMenu thecookie={thecookie} setThecookie={setThecookie} />
+<Footer />
+</>
 )
 
 const renderCookiesInfo = (props) => (
@@ -198,8 +212,6 @@ return(
 <Route path="/cookiemenu" render={renderCookieMenu} />
 
 </Router>
-
-<Footer />
 </div>
 )
 }

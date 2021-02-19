@@ -3458,6 +3458,18 @@ footer {
   opacity: .8;
 }
 
+.det-theorderws-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.det-ttle-order {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #303a52;
+}
+
 .dash-imgbx {
   height: 40px;
   width: 40px;
@@ -3550,6 +3562,21 @@ footer {
   margin-right: 10px;
 }
 
+.det-person-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #303a52;
+}
+
 .signout-btn {
   position: absolute;
   top: 15px;
@@ -3597,6 +3624,18 @@ footer {
 .ol-header {
   width: 20%;
   padding: 5px 0 5px 10px;
+}
+
+.the-order-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background: whitesmoke;
+  color: black;
+  padding: 60px 80px;
 }
 
 .o-container {
@@ -3671,7 +3710,95 @@ footer {
   color: white;
 }
 
+.det-theorders-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.det-order-cont {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.det-orders {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #303a52;
+}
+
+.det-orderbx {
+  padding-right: 10px;
+  margin-right: 15px;
+  padding: 5px 10px;
+  background: #fc85ae;
+  margin-bottom: 15px;
+}
+
+.pop-span {
+  font-family: 14px;
+  color: #574b90;
+}
+
+.pop-orderno {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #303a52;
+}
+
+.det-ttle {
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #303a52;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #574b90;
+  margin-bottom: 10px;
+}
+
+.pop-x {
+  outline: none;
+  background: none;
+  border: none;
+  float: right;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  cursor: pointer;
+}
+
+#xforadmin {
+  color: #303a52;
+  font-size: 3rem;
+}
+
 @media (max-width: 840px) {
+  .the-order-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background: whitesmoke;
+    color: black;
+    padding: 60px 20px;
+  }
   .admin-page {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3798,119 +3925,6 @@ footer {
 @media (max-width: 740px) {
   .cookis-about-page {
     padding: 0 10px 100px 10px;
-  }
-}
-
-.the-order-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-  background: whitesmoke;
-  color: black;
-  padding: 60px 80px;
-}
-
-.pop-x {
-  padding: 10px 18px;
-  background: none;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  float: right;
-  border-radius: 50%;
-  border: 1px solid red;
-  background: none;
-  color: red;
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  cursor: pointer;
-  outline: none;
-}
-
-.det-person-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #303a52;
-}
-
-.det-ttle {
-  font-size: 1.8rem;
-  font-family: "Montserrat", sans-serif;
-  color: #303a52;
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid #574b90;
-  margin-bottom: 10px;
-}
-
-.pop-orderno {
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
-  color: #303a52;
-}
-
-.pop-span {
-  font-family: 14px;
-  color: #574b90;
-}
-
-.det-order-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.det-ttle-order {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  color: #303a52;
-}
-
-.det-theorderws-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.det-orderbx {
-  padding-right: 10px;
-  margin-right: 15px;
-  border-right: 1px solid #303a52;
-}
-
-.det-orders {
-  font-family: "PT Serif", serif;
-}
-
-@media (max-width: 800px) {
-  .the-order-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 99;
-    background: whitesmoke;
-    color: black;
-    padding: 60px 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
