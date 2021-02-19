@@ -26,44 +26,61 @@ const App = () => {
 const [thebananaz, setThebananaz] = useState([
         {
         id: 401,
-        name: 'banana Loaf',
-        subname: 'banana loaf with cream cheese',
-        cost: 170,
+        name: 'banana loaf(w/ cream cheese)',
+        subname: '',
+        cost: 220,
         qnty: 1,
         image: '/images/bmenuone.png'
         },
         {
         id: 402,
         name: 'vegan banana loaf',
-        subname: 'walang def',
+        subname: 'none',
         cost: 170,
         qnty: 1,
         image: '/images/halfbanana.jpg'
         },
         {
         id: 403,
-        name: 'banana breads delightree',
-        subname: 'with wallnuts + choco chips',
-        cost: 170,
+        name: 'vegan banana loaf(w/ wallnuts & choco chips)',
+        subname: 'w wallnuts & choco chips',
+        cost: 200,
         qnty: 1,
         image: '/images/bmenuthree.jpg'
         },
         {
         id: 404,
-        name: 'banana breads delightur',
-        subname: 'wala pa',
+        name: 'cream cheese banana bread',
+        subname: 'none',
         cost: 170,
         qnty: 1,
         image: '/images/bmenufour.jpg'
         },
         {
         id: 405,
-        name: 'banana breads delightve',
-        subname: 'wala pa',
-        cost: 170,
+        name: 'vegan banana loaf(w/ choco chunks)',
+        subname: 'none',
+        cost: 190,
         qnty: 1,
         image: '/images/bmenufive.jpg'
         },
+        {
+        id: 406,
+        name: 'plain vegan banana loaf(w/ banana on top)',
+        subname: 'none',
+        cost: 150,
+        qnty: 1,
+        image: '/images/bmenusix.png'
+        },
+        {
+        id: 406,
+        name: 'vegan banana loaf(w/ chocolate chips)',
+        subname: 'none',
+        cost: 160,
+        qnty: 1,
+        image: '/images/bmenuseven.png'
+        },
+        
 ])
 
 const [thecookie, setThecookie] = useState([
