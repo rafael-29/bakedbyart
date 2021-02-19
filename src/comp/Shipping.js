@@ -111,6 +111,7 @@ setIsComplete(true)
 
 return(
 <div className="shipping-page" style={{position: 'relative'}}>
+
 <h1 style={{marginBottom: '30px'}} className="ch-logoname">
     <Link style={{textDecoration: 'none', color: 'brown'}} to="/">Baked.By.Art</Link>
 </h1>
@@ -120,30 +121,38 @@ return(
             <form className="ship-form">
                     <div className="shp-header">SHIPPING</div>
                 <div className="form-namelastname inpbx">
-                    <input className="shp-inp" type="text" alt="" placeholder="Name"
-                    value={shipName} onChange={e => setShipName(e.target.value)} required/>
-                    <input className="shp-inp" type="text" alt="" placeholder="lastname"
-                    value={shipLname} onChange={e => setShipLname(e.target.value)} required/>
+
+                    <input className="shp-inp namelnam-frm-inp" type="text" alt="" placeholder="Name"
+                    value={shipName} 
+                    onChange={e => setShipName(e.target.value)} required/>
+                
+                    <input className="shp-inp namelnam-frm-inp" type="text" alt="" placeholder="lastname"
+                    value={shipLname} 
+                    onChange={e => setShipLname(e.target.value)} required/>
+                
                 </div>
                 <div className="ship-address-sub inpbx">
+
                     <input className="shp-inp shp-add" type="text" alt="" placeholder="address"
                     value={shipAddress} onChange={e => setShipAdd(e.target.value)}required/>
+                
                     <input className="shp-inp" type="text" alt="" placeholder="Subv/Apt#/Bldg#"
                     value={shipSub} onChange={e => setShipSub(e.target.value)}required/>
+                
                 </div>
                 <div className="zip-city inpbx">
-                    <input className="shp-inp" type="text" alt="" placeholder="City"
+                    <input className="shp-inp shp-city-inp" type="text" alt="" placeholder="City"
                     value={shipCity} onChange={e => setShipCity(e.target.value)}required/>                   
                 </div>
                 <div className="phone-number inpbx">
                 <input className="shp-inp phone" type="number" alt="" placeholder="Phone Number"
                 value={shipPhone} onChange={e => setShipPhone(e.target.value)} required/>
                 </div>
-                <label className="date-lbl">Delivery date: <i class="fas fa-calendar-alt"></i> <DatePicker className="date-fek" selected={selectedDate} onChange={date => setSelectedDate(date)} />
+                <label for="date-feker" className="date-lbl">Choose delivery date: <i class="fas fa-calendar-alt"></i> <DatePicker id="date-feker" className="date-fek" selected={selectedDate} onChange={date => setSelectedDate(date)} />
                 </label>
 
-                <fieldset>
-                <legend>message your favorite topings and mix</legend>
+                <fieldset className="shp-fldset">
+                <legend className="cap-shp">YOU CAN LEAVE A SMALL MESSAGE HERE</legend>
                 <textarea className="rq-message" value={rqMessage} 
                 onChange={e => setRqMessage(e.target.value)}/>
                 </fieldset>
@@ -154,9 +163,7 @@ return(
                 <input type="radio" name="cod" id="cod" className="cod"/> 
                 Cash On Delivery</label>
 
-                <label to="paypal" className="lbl-cod">    
-                <input type="radio" name="cod" id="paypal" className="cod"/> 
-                PAYPAL</label>
+  
                 </div>
 
                 <div className="ship-btnbx">

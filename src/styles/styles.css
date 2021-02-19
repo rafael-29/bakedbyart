@@ -2614,6 +2614,14 @@ footer {
       flex-wrap: wrap;
 }
 
+.zip-city {
+  width: 300px;
+}
+
+.zip-city .shp-city-inp {
+  width: 100%;
+}
+
 .billing-bx {
   padding: 20px 15px;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -2657,12 +2665,26 @@ footer {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   cursor: pointer;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.shp-fldset {
+  margin-bottom: 18px;
+}
+
+.cap-shp {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  opacity: .8;
+  font-weight: 600;
 }
 
 .date-lbl {
   color: brown;
   font-family: "PT Serif", serif;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .fa-calendar-alt {
@@ -2704,10 +2726,11 @@ footer {
 }
 
 .shp-inp {
+  outline: none;
   padding: 3px 5px;
   margin-right: 5px;
   font-size: 1.3rem;
-  border: 1px solid brown;
+  border: 1px solid rgba(70, 21, 21, 0.609);
 }
 
 .shp-inp::-webkit-input-placeholder {
@@ -2764,10 +2787,6 @@ footer {
   width: 100%;
 }
 
-.shp-add {
-  width: 50%;
-}
-
 .form-namelastname {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2820,171 +2839,52 @@ footer {
   .shipping-page {
     padding: 20px;
   }
-  .ship-cont {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
   .shipform-cont {
     width: 100%;
-    overflow: hidden;
   }
   .ship-form {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .shp-header {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.7rem;
-    opacity: .7;
-    margin-bottom: 5px;
-  }
-  .ship-details {
-    width: 100%;
-  }
-  .ship-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin: 10px 0;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    border-bottom: 2px solid brown;
-  }
-  .inpbx {
-    margin-bottom: 4px;
-  }
-  .shp-inp {
-    padding: 3px 5px;
-    margin-right: 5px;
-    font-size: 1.3rem;
-    border: 1px solid brown;
-    width: 48%;
   }
   .form-namelastname {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .namelnam-frm-inp {
+    width: 49%;
   }
   .ship-address-sub {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .shp-add {
-    width: 500px;
-  }
-  .shp-inp::-webkit-input-placeholder {
-    opacity: .7;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1rem;
-  }
-  .shp-inp:-ms-input-placeholder {
-    opacity: .7;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1rem;
-  }
-  .shp-inp::-ms-input-placeholder {
-    opacity: .7;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1rem;
-  }
-  .shp-inp::placeholder {
-    opacity: .7;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.1rem;
-  }
-  .zip-city {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .phone {
-    width: 100%;
-  }
-  .ship-btn {
-    padding: 10px 10px;
-    width: 80%;
-    border: none;
-    background: #884939;
-    color: #fff3a7;
-    font-size: 1.2rem;
-    outline: none;
-    cursor: pointer;
-  }
-  .ship-btn:active {
-    color: #884939;
-    background: #fff3a7;
-  }
-  .ship-btnbx {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-  .shp-add {
-    width: 50%;
-  }
-  .form-namelastname {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .ship-itemsImgBx {
-    width: 100px;
-    height: 120px;
-    margin-right: 10px;
-  }
-  .ship-itemsImgBx .shp-img {
-    height: 100%;
+  .shp-inp {
     width: 100%;
   }
-  .shp-name {
-    font-family: "Redressed", cursive;
-    font-size: 1.6rem;
-    color: brown;
+  .shp-add {
+    margin-bottom: 5px;
   }
-  .shp-subname {
-    font-weight: 600;
-    color: #884939;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #884939;
+  .zip-city {
+    width: 100%;
   }
-  .shp-qnty-cost {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    font-family: "PT Serif", serif;
-    color: brown;
+  .zip-city .shp-city-inp {
+    width: 100%;
   }
 }
 

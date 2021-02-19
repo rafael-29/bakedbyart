@@ -87,7 +87,7 @@ const [thecookie, setThecookie] = useState([
 {
 id: 499,
 name: 'Ube Cheese Pandesal',
-subname: 'Ube with cream cheese inside',
+subname: 'Ube pandesal with cream cheese inside',
 cost: 0,
 fcost: 200,
 scost: 300,
@@ -109,7 +109,7 @@ image: '/images/thecookieeight.jpg'
 {
 id: 503,
 name: 'white choco macadamia',
-subname: 'cookie with a vanilla',
+subname: 'this cookie is loaded with white choco inside',
 cost: 0,
 fcost: 200,
 scost: 300,

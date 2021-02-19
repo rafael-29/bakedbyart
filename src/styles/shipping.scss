@@ -1,287 +1,209 @@
 .shipping-page{
-    padding: 100px;
-    }
-    
-    .ship-cont{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    }
-    // BILLING
+padding: 100px;
+}
+
+.ship-cont{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+.zip-city{
+width: 300px;
+.shp-city-inp{
+width: 100%;
+}
+}
+// BILLING
 .billing-bx{
-    padding: 20px 15px;
-    border: 1px solid rgba(0,0,0,.3);
-    }
-    .cod{
-    transform: scale(1.4);
-    color: brown;
-    margin-right: 5px;
-    }
-    .lbl-cod{
-    font-size: 1.2rem;
-    font-family: $ptserif;
-    color: rgba(0,0,0,.7);
-    margin-right: 30px;
-    cursor: pointer;
-    
-    }
-    
-    // SHIP FORM CONTACT
-    .shipform-cont{
-    width: 600px;
-    }
-    .ship-form{
-    width: 100%;
-    }
-    .shp-header{
-    font-family: $monste;
-    font-size: 2rem;
-    opacity: .7;
-    margin-bottom: 5px;
-    }
-    .date-fek{
-        color: brown;
-        padding: 5px;
-        font-family: monospace;
-        width: 100px;
-        transform: translateY(-3px);
-    cursor: pointer;
-        }
-        .date-lbl{
-        color: brown;
-        font-family: $ptserif;
-        font-size: 1.1rem;
-        }
-        .fa-calendar-alt{
-        color: brown;
-        font-size: 1.5rem;
-        margin-left: 5px;
-        margin-top: 13px;
-        }
-        .rq-message{
-        border: none;
-        outline: none;
-        width: 100%;
-        padding: 10px;
-        }
-    // SHIP DETAILS
-    .ship-details{
-    width: 500px;
-    }
-    .ship-items{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 10px 0;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    border-bottom: 1px solid brown;
-    
-    }
-    .inpbx{
-    margin-bottom: 4px;
-    }
-    .shp-inp{
-    padding: 3px 5px;
-    margin-right: 5px;
-    font-size: 1.3rem;
-    border: 1px solid brown;
-    }
-    .shp-inp::placeholder{
-    opacity: .7;
-    font-family: $monste;
-    font-size: 1.1rem;
-    }
-    .phone{
-    width: 50%;
-    }
-    .ship-btn{
-    padding:12px 25px;
-    border: none;
-    background: $dark;
-    color: $verylight;
-    font-size: 1.4rem;
-    font-family: $monste;
-    outline: none;
-    cursor: pointer;
-    border-radius: 2px;
-    }
-    .link-shipbtn{
-    text-decoration: none;
-    }
-    .ship-btn:active{
-    color: $dark;
-    background: $verylight;
-    }
-    .ship-btnbx{
-    margin-top: 20px;
-    width: 100%;
-  
-    }
-    .shp-add{
-    width: 50%;
-    }
-    .form-namelastname{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    }
-    .ship-itemsImgBx{
-    width: 100px;
-    height: 120px;
-    margin-right: 10px;
-    .shp-img{
-    height: 100%;
-    width: 100%;
-    }
-    }
-    .shp-name{
-    font-family: $menucap;
-    font-size: 1.6rem;
-    color: brown;
-    }
-    .shp-subname{
-    font-weight: 600;
-    color: $dark;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid $dark;
-    }
-    .shp-qnty-cost{
-    display: flex;
-    justify-content: space-between;
-    font-family: $ptserif;
-    color: brown;
-    }
+padding: 20px 15px;
+border: 1px solid rgba(0,0,0,.3);
+}
+.cod{
+transform: scale(1.4);
+color: brown;
+margin-right: 5px;
+}
+.lbl-cod{
+font-size: 1.2rem;
+font-family: $ptserif;
+color: rgba(0,0,0,.7);
+margin-right: 30px;
+cursor: pointer;
+
+}
+
+// SHIP FORM CONTACT
+.shipform-cont{
+width: 600px;
+}
+.ship-form{
+width: 100%;
+}
+.shp-header{
+font-family: $monste;
+font-size: 2rem;
+opacity: .7;
+margin-bottom: 5px;
+}
+.date-fek{
+color: brown;
+padding: 5px;
+font-family: monospace;
+width: 100px;
+transform: translateY(-3px);
+cursor: pointer;
+margin-bottom: 20px;
+outline: none;
+}
+.shp-fldset{
+margin-bottom: 18px;
+}
+.cap-shp{
+font-family: $monste;
+font-size: 1.2rem;
+opacity: .8;
+font-weight: 600;
+}
+.date-lbl{
+color: brown;
+font-family: $ptserif;
+font-size: 1.1rem;
+cursor: pointer;
+}
+.fa-calendar-alt{
+color: brown;
+font-size: 1.5rem;
+margin-left: 5px;
+margin-top: 13px;
+}
+.rq-message{
+border: none;
+outline: none;
+width: 100%;
+padding: 10px;
+}
+// SHIP DETAILS
+.ship-details{
+width: 500px;
+}
+.ship-items{
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+margin: 10px 0;
+padding-bottom: 8px;
+padding-top: 8px;
+border-bottom: 1px solid brown;
+
+}
+.inpbx{
+margin-bottom: 4px;
+}
+.shp-inp{
+outline: none;
+padding: 3px 5px;
+margin-right: 5px;
+font-size: 1.3rem;
+border: 1px solid rgba(70, 21, 21, 0.609);
+}
+.shp-inp::placeholder{
+opacity: .7;
+font-family: $monste;
+font-size: 1.1rem;
+}
+.phone{
+width: 50%;
+}
+.ship-btn{
+padding:12px 25px;
+border: none;
+background: $dark;
+color: $verylight;
+font-size: 1.4rem;
+font-family: $monste;
+outline: none;
+cursor: pointer;
+border-radius: 2px;
+}
+.link-shipbtn{
+text-decoration: none;
+}
+.ship-btn:active{
+color: $dark;
+background: $verylight;
+}
+.ship-btnbx{
+margin-top: 20px;
+width: 100%;
+}
+.form-namelastname{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+}
+.ship-itemsImgBx{
+width: 100px;
+height: 120px;
+margin-right: 10px;
+.shp-img{
+height: 100%;
+width: 100%;
+}
+}
+.shp-name{
+font-family: $menucap;
+font-size: 1.6rem;
+color: brown;
+}
+.shp-subname{
+font-weight: 600;
+color: $dark;
+margin-bottom: 10px;
+padding-bottom: 5px;
+border-bottom: 1px solid $dark;
+}
+.shp-qnty-cost{
+display: flex;
+justify-content: space-between;
+font-family: $ptserif;
+color: brown;
+}
 @media(max-width: 800px){
 
-    .shipping-page{
-        padding: 20px;
-        }
-        
-        .ship-cont{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        }
-        
-        // SHIP FORM CONTACT
-        .shipform-cont{
-        width: 100%;
-        overflow: hidden;
-        }
-        .ship-form{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        }
-        .shp-header{
-        font-family: $monste;
-        font-size: 1.7rem;
-        opacity: .7;
-        margin-bottom: 5px;
-        }
-        // SHIP DETAILS
-        .ship-details{
-        width: 100%;
-        }
-        .ship-items{
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin: 10px 0;
-        padding-bottom: 8px;
-        padding-top: 8px;
-        border-bottom: 2px solid brown;
-        
-        }
-        .inpbx{
-        margin-bottom: 4px;
-        }
-        .shp-inp{   
-        padding: 3px 5px;
-        margin-right: 5px;
-        font-size: 1.3rem;
-        border: 1px solid brown;
-        width: 48%;
-        }
-        .form-namelastname{
-        display: flex;
-        }
-        .ship-address-sub{
-            display: flex;
-        }
-        .shp-add{
-        width: 500px;
-        }
-        .shp-inp::placeholder{
-        opacity: .7;
-        font-family: $monste;
-        font-size: 1.1rem;
-        }
-        .zip-city{
-        display: flex;
-        }
-        .phone{
-        width: 100%;
-        }
-        .ship-btn{
-        padding: 10px 10px;
-        width: 80%;
-        border: none;
-        background: $dark;
-        color: $verylight;
-        font-size: 1.2rem;
-        outline: none;
-        cursor: pointer;
-        }
-        .ship-btn:active{
-        color: $dark;
-        background: $verylight;
-        }
-        .ship-btnbx{
-        margin-top: 20px;
-        width: 100%;
-        text-align: center;
-        }
-        .shp-add{
-        width: 50%;
-        }
-        .form-namelastname{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        }
-        .ship-itemsImgBx{
-        width: 100px;
-        height: 120px;
-        margin-right: 10px;
-        .shp-img{
-        height: 100%;
-        width: 100%;
-        }
-        }
-        .shp-name{
-        font-family: $menucap;
-        font-size: 1.6rem;
-        color: brown;
-        }
-        .shp-subname{
-        font-weight: 600;
-        color: $dark;
-        margin-bottom: 10px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid $dark;
-        }
-        .shp-qnty-cost{
-        display: flex;
-        justify-content: space-between;
-        font-family: $ptserif;
-        color: brown;
-        }
-
-
-
+.shipping-page{
+padding: 20px;
+}
+.shipform-cont{
+width: 100%;
+}
+.ship-form{
+width: 100%;
+}
+.form-namelastname{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+}
+.namelnam-frm-inp{
+width: 49%;
+}
+.ship-address-sub{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+}
+.shp-inp{
+width: 100%;
+}
+.shp-add{
+margin-bottom: 5px;
+}
+.zip-city{
+width: 100%;
+.shp-city-inp{
+width: 100%;
+}
+}
 }
