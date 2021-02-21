@@ -1,309 +1,280 @@
 .bread-choice{
-    list-style: none;
-    @include around();
-    margin-bottom: 8%;
-    }
-    
-    // button menu choices
-    .active{
-    background: none;
-    padding: 7px 12px;
-    border: none;
-    border-bottom: 2px solid brown;
-    color: brown;
-    outline: none;
-    font-size: 1.5rem;
-    }
-    .not-active{
-    background: none;
-    padding: 7px 12px;
-    color: brown;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    }
-    
-    // MENU STYLINGS
-    .banana-breads, .cookie-breads{
-    padding: 20px 60px;
-    }
-    
+list-style: none;
+@include around();
+margin-bottom: 8%;
+}
 
-    .banana-breads{
-    margin-bottom: 200px;
+// button menu choices
+.active{
+background: none;
+padding: 7px 12px;
+border: none;
+border-bottom: 2px solid brown;
+color: brown;
+outline: none;
+font-size: 1.5rem;
+}
+.not-active{
+background: none;
+padding: 7px 12px;
+color: brown;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 1.5rem;
+}
 
-    }
-    .flex-cont{
-    width: calc(100%-200px);
-    margin: 0 auto;
-    flex-wrap: wrap;
-    @include around();
-    height: auto;
-    margin-bottom: 50px
-    }
-    .bread-cont{
-    @include align();
-    height: auto;
-    width: auto;
-    margin: 25px auto;
-    }
-    
-    .bread-imgbx{
-    height: 320px;
-    width: 300px;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-right: 15px;
-    .img-bread{
-    height: 100%;
-    width: 100%;
-    }
-    }
-    
-    /////////// content ng menu
-    
-    .bread-cnt{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-self: start;
-        text-align: left;
-        padding: 15px 0;
-        width: 300px;
-    }
-    
-    .bread-name{
-    font-size: 2.3rem;
-    font-family: $menucap;
-    color: brown;
-    }
-    .bread-subname{
-    font-size: 1.1rem;
-    font-family: sans-serif;
-    color: brown;
-    margin-bottom: 60px;
-    }
-    .price{
-    color: brown;
-    font-size: 1.5rem;
-    border-bottom: 1px solid brown;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    }
-    .qnty-bx{
-    display: flex;
-    align-items: center;
-    width: auto;
-    margin-bottom: 18px;
-    }
-    .qnty-cont{
-    display: flex;
-    flex-direction: column;
-    }
-    
-    .qnty-btns{
-    margin-top: -2px;
-    }
-    .qnty-btn{
-    border: none;
-    background: crimson;
-    outline: none;
-    cursor: pointer;
-    height: 100%;
-    font-size: 1.2rem;
-    margin-left: 3px;
-    color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    }
-    .qty-add-btn{
-    border: none;
-    background: skyblue;
-    outline: none;
-    cursor: pointer;
-    height: 100%;
-    font-size: 1.2rem;
-    color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 4px 8px;
-    }
-    .qty-add-btn:active{
-    color: skyblue;
-    background: white;
-    }
+// MENU STYLINGS
+.banana-breads, .cookie-breads{
+padding: 20px 60px;
+}
 
-    .qnty-btn:active .fa-plus{
-    color: white;
-    background-color: $medium;
-    }
-    .qnty-btn:active .fa-minus{
-        color: crimson;
-        background-color: white;
-        border: 1px solid crimson;
-        }
-    .fa-minus{
-        background: crimson;
-        padding: 6px 8px;
-    }
-    .qntys{
-    font-size: 1.5rem;
-    margin-top: -3px;
-    color: $dark;
-    font-weight: 600;
-    }
-    .qnty-cap{
-    font-size: 1.4rem;
-    font-family: sans-serif;
-    color: brown;
-    }
-    .addtocart{
-    border: 2px solid $dark;
-    outline: none;
-    padding: 5px 0;
-    background: none;
-    color: $dark;
-    font-family: monospace;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    cursor: pointer;
-    }
-    .addtocart:active{
-    color: white;
-    border: 2px solid $verylight;
-    background: $dark;
-    }
-    
-    .openmenu{
-        cursor: pointer;
-        border: none;
-        outline: none;
-        padding: 9px 0;
-        background: $medium;
-        color: $verylight;
-        font-family: monospace;
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    
-    .openmenu:active{
-        color: $medium;
-    
-        background: $verylight;
-    
-    }
-    // BUNDLE ORDER BANANA BREADS
-    .bndl-imgbx{
-        width: 500px;
-        height: 105%;
-        .bndl-img{
-        height: 100%;
-        width: 100%;
-        }
-    }
-    .bundle-order{
-        margin: 0 auto;
-        height: 600px;
-    @include align();
-    
-    }
-    .another-imgbx{
-    width: 100%;
-    height: 260px;
-    .another-img{
-    height: 100%;
-    width: 100%;
-    }
-    }
-    .bndl-cnt{
-    padding: 10px;
-    color: brown;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    height: auto;
-    width: 400px;
-    }
-    .bndl-name{
-    font-family: $menucap;
-    font-size: 3rem;
-    color: brown;
-    }
-    .bndl-subname{
-    color: brown;
-    font-weight: 600;
-    padding-bottom: 6px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid brown;
-    }
-    .bndle-cost{
-    font-size: 1.4rem;
-    font-family: $noto;
-    }
-    .bndl-label{
-    font-size: 1.4rem;
-    font-family: $ptserif;
-    }
-    .bndl-sel{
-    border: 1px solid brown;
-    color: brown;
-    font-size: 1.3rem;
-    padding: 3px 7px;
-    outline: none;
-    cursor: pointer;
-    }
-    
-    .bndl-inst{
-    margin-top: 10px;
-    padding-top: 5px;
-    border-top: 1px solid brown;
-    }
-    .btn-cont{
-    @include around();
-    width: 100%;
-    flex-direction: column;
-    }
-    .bndl-btn{
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    font-family: $monste;
-    padding: 6px;
-    width: 100%;
-    background: $dark;
-    color: $verylight;
-    border: none;
-    margin-bottom: 12px;
-    outline: none;
-    cursor: pointer;
-    }
-    .bndl-btn:active{
-    color: $dark;
-    background: $verylight;
-    }
-    .bndl-inst{
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    }
-    .bndlshow-btn:active{
-        background: $dark;
-        color: $verylight;
-    }
-    .bndlshow-btn{
-        font-size: 1.4rem;
-    letter-spacing: 2px;
-    font-family: $monste;
-    padding: 4px;
-        width: 100%;
-        background: none;
-        color: brown;
-        border: 2px solid $dark;
-        outline: none;
-        cursor: pointer;
-    }
+
+.banana-breads{
+margin-bottom: 200px;
+
+}
+.flex-cont{
+width: calc(100%-200px);
+margin: 0 auto;
+flex-wrap: wrap;
+@include around();
+height: auto;
+margin-bottom: 50px
+}
+.bread-cont{
+@include align();
+height: auto;
+width: auto;
+margin: 25px auto;
+}
+
+.bread-imgbx{
+height: 320px;
+width: 300px;
+overflow: hidden;
+border-radius: 8px;
+margin-right: 15px;
+.img-bread{
+height: 100%;
+width: 100%;
+}
+}
+
+/////////// content ng menu
+
+.bread-cnt{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+align-self: start;
+text-align: left;
+padding: 15px 0;
+width: 300px;
+}
+
+.bread-name{
+font-size: 2.3rem;
+font-family: $menucap;
+color: black;
+opacity: .8;
+}
+.bread-subname{
+font-size: 1.1rem;
+font-family: sans-serif;
+color: black;
+opacity: .8;
+margin-bottom: 60px;
+}
+.price{
+color: black;
+opacity: .8;
+font-size: 1.5rem;
+border-bottom: 1px solid rgba(0,0,0,.9);
+margin-bottom: 10px;
+padding-bottom: 5px;
+}
+
+.qnty-bx{
+display: flex;
+align-items: center;
+width: 100%;
+margin-bottom: 18px;
+border: 2px solid rgba(0,0,0,.6)
+}
+.qnty-cont{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+width: 100%;
+padding: 4px 5px;
+}
+
+.qnty-cap{
+font-size: 1.4rem;
+font-family: $monste;
+color: black;
+opacity: .9;
+width: 40%;
+}
+.bread-inp-num{
+font-size: 1.4rem;
+width: 60%;
+border: none;
+outline: none;
+font-family: $monste;
+opacity: .9;
+}
+.addtocart{
+border: 2px solid $dark;
+outline: none;
+padding: 5px 0;
+background: none;
+color: $dark;
+font-family: monospace;
+font-size: 1.4rem;
+font-weight: 600;
+margin-bottom: 5px;
+cursor: pointer;
+}
+.addtocart:active{
+color: white;
+border: 2px solid $verylight;
+background: $dark;
+}
+
+.openmenu{
+cursor: pointer;
+border: none;
+outline: none;
+padding: 9px 0;
+background: $medium;
+color: $verylight;
+font-family: monospace;
+font-size: 1.4rem;
+font-weight: 600;
+}
+
+.openmenu:active{
+color: $medium;
+
+background: $verylight;
+
+}
+// BUNDLE ORDER BANANA BREADS
+.bndl-imgbx{
+width: 500px;
+height: 105%;
+.bndl-img{
+height: 100%;
+width: 100%;
+}
+}
+.bundle-order{
+margin: 0 auto;
+height: 600px;
+@include align();
+
+}
+.another-imgbx{
+width: 100%;
+height: 260px;
+margin-bottom: 10px;
+.another-img{
+height: 100%;
+width: 100%;
+}
+}
+.bndl-cnt{
+padding: 10px;
+color: brown;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-direction: column;
+height: auto;
+width: 400px;
+}
+.bndl-name{
+font-family: $menucap;
+font-size: 3rem;
+color: brown;
+}
+.bndl-subname{
+color: brown;
+font-weight: 600;
+padding-bottom: 6px;
+margin-bottom: 10px;
+border-bottom: 1px solid brown;
+}
+.bndle-cost{
+font-size: 1.4rem;
+font-family: $noto;
+}
+.bndl-label{
+font-size: 1.4rem;
+font-family: $ptserif;
+}
+.bndl-sel{
+border: 1px solid brown;
+color: brown;
+font-size: 1.3rem;
+padding: 3px 7px;
+outline: none;
+cursor: pointer;
+width: 100%;
+}
+.to-full{
+width: 100%;
+}
+.bndl-inst{
+margin-top: 10px;
+padding-top: 5px;
+border-top: 1px solid brown;
+}
+.btn-cont{
+@include around();
+width: 100%;
+flex-direction: column;
+}
+.bndl-btn{
+font-size: 1.4rem;
+letter-spacing: 2px;
+font-family: $monste;
+padding: 6px;
+width: 100%;
+background: $dark;
+color: $verylight;
+border: none;
+margin-bottom: 12px;
+outline: none;
+cursor: pointer;
+}
+.bndl-btn:active{
+color: $dark;
+background: $verylight;
+}
+.bndl-inst{
+font-weight: 700;
+font-size: 1.1rem;
+margin-bottom: 20px;
+}
+.bndlshow-btn:active{
+background: $dark;
+color: $verylight;
+}
+.bndlshow-btn{
+font-size: 1.4rem;
+letter-spacing: 2px;
+font-family: $monste;
+padding: 4px;
+width: 100%;
+background: none;
+color: brown;
+border: 2px solid $dark;
+outline: none;
+cursor: pointer;
+}
 
 @media(max-width:740px){
 
@@ -362,4 +333,3 @@ font-size: 1.2rem;
 }
 
 }
-    

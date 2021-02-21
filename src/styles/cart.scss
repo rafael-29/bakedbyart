@@ -6,17 +6,17 @@
     .cart-headerz{
     @include around();
     width: 96%;
-    border-bottom: 2px solid brown;
+    border-bottom: 2px solid black; opacity: .8;
     margin-bottom: 60px;
     padding-bottom: 10px;
     
     }
     .fa-home{
     font-size: 3rem;
-    color: brown;
+    color: black; opacity: .8;
     }
     .cart-headingone{
-    color: brown;
+    color: black; opacity: .8;
     text-align: center;
     }
     
@@ -36,13 +36,13 @@
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    border-bottom: 1px solid brown;
+    border-bottom: 1px solid black; opacity: .8;
     font-family: $noto;
     margin-bottom: 11px;
     .crt-headone{
     
     font-size: 2rem;
-    color: brown;
+    color: black; opacity: .8;
     }
     .crt-ul{
     list-style: none;
@@ -50,7 +50,7 @@
     }
     .crt-ul .crt-li{
     margin-left: 20px;
-    color: brown;
+    color: black; opacity: .8;
     font-size: 1.3rem;
     }
     }
@@ -100,7 +100,7 @@
     align-items: flex-start;
     
     font-family: $noto;
-    color: brown;
+    color: black; opacity: .8;
     }
     .cost{
     margin-left: 93px;
@@ -108,7 +108,7 @@
     }
     .qnty{
     font-size: 1.2rem;
-    color: brown;
+    color: black; opacity: .8;
     margin-bottom: 20px;
     font-family: $ptserif;
     }
@@ -116,11 +116,11 @@
     .crt-name{
     font-size: 2.1rem;
     font-family: $menucap;
-    color: brown;
+    color: black; opacity: .8;
     }
     .crt-subname{
     font-family: $ptserif;
-    color: brown;
+    color: black; opacity: .8;
     margin-bottom: 6px;
     position: relative;
     }
@@ -130,7 +130,7 @@
     left: 0;
     bottom: -5px;
     width: 120%;
-    background: brown;
+    background: black; opacity: .8;
     height: 1px;
     }
     .crt-btns{
@@ -141,11 +141,11 @@
     outline: none;
     cursor: pointer;
     font-size: 1.1rem;
-    color: brown;
+    color: black; opacity: .8;
     border-radius: 8px;
     padding: 10px 0;
     width: 100%;
-    border: 1px solid brown;
+    border: 1px solid black; opacity: .8;
     background: none;
     transition: .5s;
     }
@@ -161,7 +161,7 @@
     }
     .fa-arrow-left{
     font-size: 1.5rem;
-    color: brown;
+    color: black; opacity: .8;
     transform: translate(12px, 3px);
     animation: 2s arrowing ease-in-out infinite;
     }
@@ -188,7 +188,7 @@
     margin-top: 20px;
     }
     .link-empt{
-    color: brown;
+    color: black; opacity: .8;
     text-decoration: none;
     font-size: 1.6rem;
     }

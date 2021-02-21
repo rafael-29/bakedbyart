@@ -1225,18 +1225,21 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 96%;
-  border-bottom: 2px solid brown;
+  border-bottom: 2px solid black;
+  opacity: .8;
   margin-bottom: 60px;
   padding-bottom: 10px;
 }
 
 .fa-home {
   font-size: 3rem;
-  color: brown;
+  color: black;
+  opacity: .8;
 }
 
 .cart-headingone {
-  color: brown;
+  color: black;
+  opacity: .8;
   text-align: center;
 }
 
@@ -1267,14 +1270,16 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 600;
-  border-bottom: 1px solid brown;
+  border-bottom: 1px solid black;
+  opacity: .8;
   font-family: "Noto Sans KR", sans-serif;
   margin-bottom: 11px;
 }
 
 .cart-header .crt-headone {
   font-size: 2rem;
-  color: brown;
+  color: black;
+  opacity: .8;
 }
 
 .cart-header .crt-ul {
@@ -1286,7 +1291,8 @@ footer {
 
 .cart-header .crt-ul .crt-li {
   margin-left: 20px;
-  color: brown;
+  color: black;
+  opacity: .8;
   font-size: 1.3rem;
 }
 
@@ -1357,7 +1363,8 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: "Noto Sans KR", sans-serif;
-  color: brown;
+  color: black;
+  opacity: .8;
 }
 
 .cost {
@@ -1367,7 +1374,8 @@ footer {
 
 .qnty {
   font-size: 1.2rem;
-  color: brown;
+  color: black;
+  opacity: .8;
   margin-bottom: 20px;
   font-family: "PT Serif", serif;
 }
@@ -1375,12 +1383,14 @@ footer {
 .crt-name {
   font-size: 2.1rem;
   font-family: "Redressed", cursive;
-  color: brown;
+  color: black;
+  opacity: .8;
 }
 
 .crt-subname {
   font-family: "PT Serif", serif;
-  color: brown;
+  color: black;
+  opacity: .8;
   margin-bottom: 6px;
   position: relative;
 }
@@ -1391,7 +1401,8 @@ footer {
   left: 0;
   bottom: -5px;
   width: 120%;
-  background: brown;
+  background: black;
+  opacity: .8;
   height: 1px;
 }
 
@@ -1404,11 +1415,13 @@ footer {
   outline: none;
   cursor: pointer;
   font-size: 1.1rem;
-  color: brown;
+  color: black;
+  opacity: .8;
   border-radius: 8px;
   padding: 10px 0;
   width: 100%;
-  border: 1px solid brown;
+  border: 1px solid black;
+  opacity: .8;
   background: none;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1429,7 +1442,8 @@ footer {
 
 .fa-arrow-left {
   font-size: 1.5rem;
-  color: brown;
+  color: black;
+  opacity: .8;
   -webkit-transform: translate(12px, 3px);
           transform: translate(12px, 3px);
   -webkit-animation: 2s arrowing ease-in-out infinite;
@@ -1480,7 +1494,8 @@ footer {
 }
 
 .link-empt {
-  color: brown;
+  color: black;
+  opacity: .8;
   text-decoration: none;
   font-size: 1.6rem;
 }
@@ -1592,20 +1607,23 @@ footer {
 .bread-name {
   font-size: 2.3rem;
   font-family: "Redressed", cursive;
-  color: brown;
+  color: black;
+  opacity: .8;
 }
 
 .bread-subname {
   font-size: 1.1rem;
   font-family: sans-serif;
-  color: brown;
+  color: black;
+  opacity: .8;
   margin-bottom: 60px;
 }
 
 .price {
-  color: brown;
+  color: black;
+  opacity: .8;
   font-size: 1.5rem;
-  border-bottom: 1px solid brown;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
@@ -1617,82 +1635,40 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: auto;
+  width: 100%;
   margin-bottom: 18px;
+  border: 2px solid rgba(0, 0, 0, 0.6);
 }
 
 .qnty-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.qnty-btns {
-  margin-top: -2px;
-}
-
-.qnty-btn {
-  border: none;
-  background: crimson;
-  outline: none;
-  cursor: pointer;
-  height: 100%;
-  font-size: 1.2rem;
-  margin-left: 3px;
-  color: white;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.qty-add-btn {
-  border: none;
-  background: skyblue;
-  outline: none;
-  cursor: pointer;
-  height: 100%;
-  font-size: 1.2rem;
-  color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 4px 8px;
-}
-
-.qty-add-btn:active {
-  color: skyblue;
-  background: white;
-}
-
-.qnty-btn:active .fa-plus {
-  color: white;
-  background-color: #967248;
-}
-
-.qnty-btn:active .fa-minus {
-  color: crimson;
-  background-color: white;
-  border: 1px solid crimson;
-}
-
-.fa-minus {
-  background: crimson;
-  padding: 6px 8px;
-}
-
-.qntys {
-  font-size: 1.5rem;
-  margin-top: -3px;
-  color: #884939;
-  font-weight: 600;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  padding: 4px 5px;
 }
 
 .qnty-cap {
   font-size: 1.4rem;
-  font-family: sans-serif;
-  color: brown;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  opacity: .9;
+  width: 40%;
+}
+
+.bread-inp-num {
+  font-size: 1.4rem;
+  width: 60%;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  opacity: .9;
 }
 
 .addtocart {
@@ -1758,6 +1734,7 @@ footer {
 .another-imgbx {
   width: 100%;
   height: 260px;
+  margin-bottom: 10px;
 }
 
 .another-imgbx .another-img {
@@ -1816,6 +1793,11 @@ footer {
   padding: 3px 7px;
   outline: none;
   cursor: pointer;
+  width: 100%;
+}
+
+.to-full {
+  width: 100%;
 }
 
 .bndl-inst {

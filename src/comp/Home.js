@@ -45,7 +45,7 @@ const [bundle, setBundle] = useState({
     id: 333,
     name: 'Cookie Bites',
     chosen: full,
-    cost: 0,
+    cost: 230,
     image: 'images/cookiebites.png',
     subname: 'Hand-mixed cookie dough, with semi-sweet chocolate chips & dark chocolate morsels'
 })
@@ -163,25 +163,25 @@ const bananaMenu = () => (
                 className="another-img"alt="baked.by.art" />
             </div>
 
-            <div>
+            <div className="to-full">
                 <div className="bndle-cost">Price: ₱{bundle.chosen === full ? 230 : 260}</div>
-                <div>
-                <label className="bndl-label">Choose Quantity: </label>
-                <select value={bundle.chosen} onChange={changeCost} className="bndl-sel">
-                {
-                bundleqty.map((bndl,idx) => (
-                <option value={bndl} key={idx}>{bndl}</option>
-                ))
-                }
-                </select>
-                {/* <h3>sample: {sample}</h3> */}
-                </div>
+                    <div>
+                        <select value={bundle.chosen} onChange={changeCost} className="bndl-sel">
+                        {
+                        bundleqty.map((bndl,idx) => (
+                        <option value={bndl} key={idx}>{bndl}</option>
+                        ))
+                        }
+                        </select>
+                    </div>
+
                 <div className="bndl-inst">you can choose more cookies in our 
                 <Link style={{color: 'brown', opacity: '.8'}} to="/cookiemenu"> MENU</Link></div>
                 <div className="btn-cont">
-                <button onClick={() => addBundleOrder(bundle)} onMouseDown={showNow} className="bndl-btn">ADD TO CART</button>
-                <button onClick={openAllMenu} className="bndlshow-btn">SHOW ALL MENU</button>
+                    <button id="atc" onClick={() => addBundleOrder(bundle)} onMouseDown={showNow} className="bndl-btn">ADD TO CART</button>
+                    <button onMouseDown={showNow} onClick={openAllMenu} className="bndlshow-btn">BUY IT NOW</button>
                 </div>
+
             </div>
         </div>
 
@@ -189,6 +189,13 @@ const bananaMenu = () => (
 
 </div>
 )
+
+// BUY IT NOW FOR BANANA BREADS
+const breadBuyItNow = () => {
+window.location.replace('/cart')
+window.document.getElementById('buyitnow').click()
+
+}
 
 // rendering cookies menu
 const cookiesMenu = () => (
@@ -212,18 +219,18 @@ cookiesBread.map(bread => (
             <div className="qnty-bx">
 
                     <div className="qnty-cont">
-                        <div className="qntys"><span className="qnty-cap">Quantity</span> {bread.qnty}</div>
-
-                        <div className="qnty-btns">
-                            <button onClick={() => addqntycookie(bread)} className="qty-add-btn">add quantity</button>
-                            <button onClick={() => deductCookie(bread)} className="qnty-btn"><i className="fas fa-minus"></i></button>
-                        </div>
+                        <div className="qnty-cap">Quantity</div>
+                        <input className="bread-inp-num"
+                        type="number" alt="baked.by.art" value={bread.qnty} 
+                        onChange={e => {
+                        setCookies(cookiesBread.map(cook => cook.id === bread.id ? {...cook, qnty: e.target.value} : cook))
+                        }}/>
                     </div>
                 
             </div>
         
-        <button onClick={() => addBundleOrder(bread)} className="addtocart">ADD TO CART</button>
-        <button onClick={openAllMenu} className="openmenu">OPEN ALL MENU</button>
+        <button id="buyitnow" onClick={() => addBundleOrder(bread)} className="addtocart">ADD TO CART</button>
+        <button onClick={breadBuyItNow} className="openmenu">BUY IT NOW</button>
     </div>
 
 </div>
@@ -238,7 +245,8 @@ cookiesBread.map(bread => (
 
 // opening all menu
 const openAllMenu = () => {
-window.location.replace('/collection')
+window.location.replace('/cart')
+window.document.getElementById('atc').click()
 }
 
 //// START OF RETURNING HTML
@@ -257,7 +265,7 @@ return(
 
         <p className="madebyhand">made by hand, from scratch, with love</p>
 
-        <Link to="/collection" className="test-home-btn">SHOW MENU</Link>
+        <Link to="/collection" className="test-home-btn">BUY NOW</Link>
     </div>
 </div>
 
