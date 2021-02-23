@@ -68,8 +68,7 @@ JSON.parse(localStorage.getItem('carts')).map(crt => (
     </div>
     <div className="bread-details">
         <div className="crt-name">{crt.name}</div>
-        <div className="crt-subname">{crt.subname}</div>
-
+        
         <div className="qnty">Quantity: {!crt.qnty ? `${crt.chosen}` : `${crt.qnty}${crt.qnty === 1 ? 'pc of bread' : 'pcs of bread'}`}</div>
 
         <div className="crt-btns">
@@ -148,12 +147,6 @@ const renderSum = () => (
 // RETURN JSX
 return(
 <div className="cart-page">
-
-    <div className="cart-headerz">
-    <i className="fas fa-home"></i>
-        <h1 className="cart-headingone">Delivering Cookies Safely To Your Door</h1>
-    <i className="fas fa-home"></i>
-    </div>
 
     <div className="the-container">
 
